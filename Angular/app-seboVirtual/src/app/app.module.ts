@@ -11,6 +11,8 @@ import { PagamentoComponent } from './pagamento/pagamento.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { ConsultaProdutoComponent } from './consulta-produto/consulta-produto.component';
 import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
