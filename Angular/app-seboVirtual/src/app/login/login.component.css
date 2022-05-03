@@ -1,0 +1,19 @@
+#imagem-fundo {
+    background-image: url('https://storyset.com/illustration/reading-glasses/bro#F89C8BFF&hide=&hide=complete');
+    min-height: 100vh;
+    background-size: 90%;
+    background-repeat: no-repeat;
+  }
+  .btn{
+      background-color: orange;
+  }
+  .btn:hover{
+     background-color: gray;
+     color: orange;
+  }
+  h1{
+      color: orange;
+  }
+  label{
+      color: black;
+  }
