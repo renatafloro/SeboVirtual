@@ -1,34 +1,35 @@
 <div class="container-fluid">
-    <div class="row d-flex justify-content-center">
-  
-      <div class="col-md-6" id="imagem-fundo"></div>
-  
-      <div class="col-md-6 d-flex justify-content-center align-items-center">
-  
-        <div class="col-md-6">
-          <h1 class="text-center mb-4">Faça seu Login</h1>
-  
-          <form name="formulario" action="">
-            <div class="row mb-4">
-              <label for="nome">Digite seu email</label>
-              <input type="text" id="nome" placeholder="Nome" class="form-control"/>
-            </div>
-    
-            <div class="row mb-4">
-              <label for="senha">Senha</label>
-              <input type="password" id="senha" placeholder="Senha" class="form-control"/>
-            </div>
+  <div class="row d-flex justify-content-center">
 
-  
-            <div class="row d-flex justify-content-center">
-              <button onclick="enviar()" class="btn w-25">Entrar</button>
-            </div>
-            <p class="text-center">
-                Ainda não tem uma conta?
-                <a routerLink="/cadastrousuario"> Cadastre-se</a>
-              </p>
-          </form>
-        </div>
+    <div class="col-md-6" id="imagem-fundo"></div>
+
+    <div class="col-md-6 d-flex justify-content-center align-items-center">
+
+      <div class="col-md-6">
+        <h1 class="text-center mb-4">Faça seu Login</h1>
+
+        <form name="formulario" action="">
+          <div class="row mb-4">
+            <label for="nome">Digite seu email</label>
+            <input type="text" id="nome" placeholder="Nome" class="form-control" />
+          </div>
+
+          <div class="row mb-4">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Senha" class="form-control" />
+          </div>
+
+
+          <div class="row d-flex justify-content-center">
+            <button onclick="enviar()" class="btn w-25">Entrar</button>
+          </div>
+          <hr>
+          <p class="text-center">
+            Ainda não tem uma conta?
+            <a routerLink="/cadastrousuario"> Cadastre-se</a>
+          </p>
+        </form>
       </div>
     </div>
   </div>
+</div>

@@ -1,0 +1,46 @@
+#imagem-fundo {
+  /*background-image: url('');*/
+  min-height: 92vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-fluid {
+  background-color: #F8F0E8;
+}
+
+.btn {
+  background-color: #F89C8B;
+  border-radius: 25px;
+  border-color: #6AAAAA
+}
+
+input {
+  border-radius: 25px;
+  background-color: #FCF7F2;
+  border-color: #6AAAAA;
+}
+
+select {
+  border-radius: 25px;
+  background-color: #FCF7F2;
+  border-color: #6AAAAA;
+}
+
+.btn:hover {
+  background-color: #6AAAAA;
+  color: white;
+}
+
+h1 {
+  color: #263238;
+}
+
+label {
+  color: #263238;
+}
+
+hr {
+  color: #6AAAAA;
+}

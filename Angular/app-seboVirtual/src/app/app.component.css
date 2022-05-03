@@ -1,0 +1,10 @@
+.navbar{
+    background-color: #FFFAF9;
+   
+}
+.nav-link{
+    color: #6AAAAA;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
