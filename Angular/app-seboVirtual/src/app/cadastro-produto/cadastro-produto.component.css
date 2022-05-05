@@ -1,0 +1,34 @@
+.container-fluid {
+background-color: #F8F0E8;
+ }
+
+h1{
+    text-align: center;
+    color: #263238;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+hr{
+    color: #6AAAAA;
+}
+
+table{
+   background-color:#FFC8B7;
+}
+
+input {
+    border-radius: 25px;
+    background-color: #FCF7F2;
+    border-color: #6AAAAA;
+  }
+  
+.ng{
+  font-family: 'Courier New', Courier, monospace;
+}
+  
+  .btn {
+    background-color: #F89C8B;
+    border-radius: 25px;
+    border-color: #6AAAAA;
+    
+  }
