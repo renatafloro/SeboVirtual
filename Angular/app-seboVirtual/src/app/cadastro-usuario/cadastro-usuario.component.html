@@ -1,37 +1,40 @@
 <div class="container-fluid">
     <div class="row d-flex justify-content-center ">
   
-        <div class="col-md-6" id="imagem-fundo"></div>
+      <div class="col-md-6" id="imagem-fundo">
+        <img src="../../assets/img/Cadastro.png" alt="" class="imagem-fundo-cadastro">
+      </div>
   
       <div class="col-md-6 d-flex justify-content-center align-items-center">
   
         <div class="col-md-6">
+          <br>
           <h1 class="text-center mb-4">Faça seu cadastro</h1>
   
           <form action="">
             <div class="row mb-4">
               <label for="">Nome</label>
-              <input name="nome" type="text" placeholder="Digite seu nome" class="form-control" />
+              <input name="nome" type="text" placeholder="Nome Completo" class="form-control" />
             </div>
  
             <div class="row mb-4">
               <label for="">E-mail</label>
-              <input name="email" type="email" placeholder="digite seu E-mail" class="form-control" />
+              <input name="email" type="email" placeholder="example@gmail.com" class="form-control" />
             </div>
     
             <div class="row mb-4">
               <label for="">Senha</label>
-              <input  name="senha" type="password" placeholder="Senha" class="form-control" />
+              <input  name="senha" type="password" placeholder="********" class="form-control" />
             </div>
   
             <div class="row mb-4">
               <label for="">Confirmar senha</label>
-              <input  name="confirmarSenha" type="password" placeholder="Confirmar senha" class="form-control" />
+              <input  name="confirmarSenha" type="password" placeholder="********" class="form-control" />
             </div>
 
             <div class="row mb-4">
                 <label>CPF</label>
-                <input class="form-control" type="text" name="foto" id="foto" placeholder="Link da sua foto">
+                <input class="form-control" type="text" name="cpf" id="Cpf" placeholder="123.456.789-10">
               </div>
   
             <div class="row mb-4">
@@ -50,7 +53,7 @@
           <hr>
           <p class="text-center">
             Já possui uma conta?
-            <a routerLink="/login"> Entrar</a>
+            <a class="li-ec" routerLink="/login"> Entrar</a>
           </p>
          
         </div>

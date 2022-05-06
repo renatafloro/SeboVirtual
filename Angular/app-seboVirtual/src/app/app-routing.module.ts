@@ -7,6 +7,8 @@ import { ConsultaProdutoComponent } from './consulta-produto/consulta-produto.co
 import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { RodapeComponent } from './rodape/rodape.component';
+import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
   {
@@ -40,7 +42,18 @@ const routes: Routes = [
 {
   path:'consultaproduto',
   component: ConsultaProdutoComponent
+},
+
+{
+ path:'sobre',
+ component: SobreComponent
+},
+
+{
+  path:'rodape',
+  component: RodapeComponent
 }
+
 ];
 
 @NgModule({

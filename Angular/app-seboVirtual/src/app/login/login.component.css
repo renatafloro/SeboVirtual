@@ -1,8 +1,7 @@
-#imagem-fundo {
-  background-image: url('https://storyset.com/illustration/reading-glasses/bro#F89C8BFF&hide=&hide=complete');
-  min-height: 92vh;
-  background-size: 90%;
-  background-repeat: no-repeat;
+.livro__login{
+  max-width: 80%;
+  margin-top: 5%;
+  margin-left: 12%;
 }
 
 .container-fluid {
@@ -19,6 +18,8 @@ input {
   background-color: #F89C8B;
   border-radius: 25px;
   border-color: #6AAAAA;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
 }
 
 .btn:hover {
@@ -28,12 +29,31 @@ input {
 
 h1 {
   color: #263238;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 label {
   color: #263238;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
 }
 
 hr {
   color: #6AAAAA;
+}
+
+::placeholder{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.li-ec{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: #6AAAAA;
+}
+
+p{
+  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: #F89C8B;
 }

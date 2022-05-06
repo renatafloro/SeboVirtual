@@ -13,6 +13,8 @@ import { ConsultaProdutoComponent } from './consulta-produto/consulta-produto.co
 import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { SobreComponent } from './sobre/sobre.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {HttpClientModule} from '@angular/common/http';
     PagamentoComponent,
     CadastroProdutoComponent,
     ConsultaProdutoComponent,
-    EditaProdutoComponent
+    EditaProdutoComponent,
+    SobreComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
