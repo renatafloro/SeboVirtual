@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+          <a routerLink="" class="nav-link active" aria-current="page" routerLink="home">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="consultaproduto">Livros</a>
@@ -25,7 +25,7 @@
           <a class="nav-link active" aria-current="page" routerLink="cadastroproduto">Cadastrar</a>
         </li>
        <li class="nav-item">
-          <a class="nav-link active" aria-current="page"  routerLink="home">Logout</a>
+          <a class="nav-link active" aria-current="page" (click)="logout()">Logout</a>
         </li>
         <li class="nav-item">
           <i class="nav-link active" aria-current="page" i class="fa fa-shopping-cart i"  routerLink="carrinho"></i>
@@ -33,6 +33,7 @@
       </ul>
     </div>
   </div>
+  <label *ngIf="!usuarioLogado.email">{{usuarioLogado.nome}}</label>
 </nav>
 
 <router-outlet></router-outlet>

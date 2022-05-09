@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthguardService } from './authguard.service';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
 },
 {
   path: 'cadastroproduto',
-  component: CadastroProdutoComponent
+  component: CadastroProdutoComponent,
+  canActivate: [AuthguardService]
 },
 {
   path:'produtos/:idproduto',
