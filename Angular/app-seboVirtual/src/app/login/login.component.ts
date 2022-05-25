@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from '../usuario.service';
 import { RouterLink } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { DecodeTokenService } from '../decode-token.service';
-import { UsuarioService } from '../usuario.service';
+
 
 @Component({
   selector: 'app-login',
@@ -41,12 +42,12 @@ export class LoginComponent implements OnInit {
 
   /*fazerLogin(dados: any){
 
-    this.serviceUsuario.getAll().subscribe(x => {
+    this.UsuarioService.getAll().subscribe(x => {
       this.usuarios = x
       this.verificarLogin(dados.email, dados.senha, this.usuarios)
     })
-  }*/
-
+  }
+*/
   verificarLogin(email: string, senha: string, dados: any){
     
     for(let i = 0; i < dados.length; i++) {

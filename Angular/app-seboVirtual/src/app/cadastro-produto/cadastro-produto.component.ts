@@ -27,7 +27,6 @@ export class CadastroProdutoComponent implements OnInit {
   }
 
   excluir(id:any){
-    this.serviceProduto.excluir(id).subscribe(x => {window.location.reload()})
- }
-
+     this.serviceProduto.excluir(id).subscribe(x => {window.location.reload()})
+  }
 }

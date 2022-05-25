@@ -1,7 +1,9 @@
 <div class="container">
     <h1 class="text-center">Edição de Produtos</h1>
-    <input class="form-control" type="text" [(ngModel)]="produto.id" />
+    <input class="form-control" type="text" [(ngModel)]="produto.categoria" />
+    <br>
     <input class="form-control" type="text" [(ngModel)]="produto.descricao" />
+    <br>
     <input class="form-control" type="text" [(ngModel)]="produto.preco" />
     <button class="btn btn-primary mt-3" (click)="atualizar()">Gravar</button> {{ msg }}
     <button routerLink="/cadastroproduto" type="reset" class="btn btn-danger mt-3">Cancelar</button>
