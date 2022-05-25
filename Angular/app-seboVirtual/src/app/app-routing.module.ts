@@ -23,7 +23,7 @@ const routes: Routes = [
 {
   path: 'cadastroproduto',
   component: CadastroProdutoComponent,
-  canActivate: [AuthguardService]
+  //canActivate: [AuthguardService]
 },
 {
   path:'produtos/:idproduto',

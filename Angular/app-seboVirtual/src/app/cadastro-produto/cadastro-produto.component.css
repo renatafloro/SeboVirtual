@@ -24,6 +24,8 @@ input {
   
 .ng{
   font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #6AAAAA;
 }
   
   .btn {

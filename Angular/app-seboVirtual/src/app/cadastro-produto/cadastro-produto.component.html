@@ -6,18 +6,16 @@
     <form #f="ngForm" (ngSubmit)="gravar(f.value)">
 
         <div class="ng">
+        <input required minlength="5" class="form-control" type="text" #fcat="ngModel" ngModel name="categoria" placeholder="Informe a Categoria" />
+        <div *ngIf="fcat.errors?.['required']" class="ng-invalid">
+        *Informe a categoria 
+        </div>
+        <br>
         <input required minlength="5" class="form-control" type="text" #fnome="ngModel" ngModel name="descricao" placeholder="Informe descrição do Livro" />
-        
-        
-<div *ngIf="fnome.errors?.['required']" class="ng-invalid">
+        <div *ngIf="fnome.errors?.['required']" class="ng-invalid">
         *Informe a descrição do Livro
         </div>
         <br>
-
-       <div *ngIf="fnome.errors?.['minlength']" class="ng-invalid">
-            *Informe no mínimo 5 caracteres
-        </div>
-
         <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco" placeholder="Informe preço" />
         <div *ngIf="fpreco.invalid" class="ng-invalid">
             *Informe o preço do produto
@@ -38,6 +36,7 @@
         <thead class="">
             <tr>
                 <th>Id</th>
+                <th>Categoria</th>
                 <th>Descrição</th>
                 <th>Preço</th>
                 <th>Edição</th>
@@ -47,6 +46,7 @@
         <tbody>
             <tr *ngFor="let prod of produtos">
                 <td> {{ prod.id }}</td>
+                <td> {{ prod.categoria }}</td>
                 <td> {{ prod.descricao }}</td>
                 <td> {{ prod.preco }}</td>
                 <td> <a [routerLink]="['/produtos',prod.id]"><i class="material-icons text-dark">mode_edit</i></a></td>

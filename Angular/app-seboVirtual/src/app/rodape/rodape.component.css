@@ -1,0 +1,28 @@
+footer {
+    background-color:  #FFC8B7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 0;
+    /* height: 70px; */
+  
+  }
+  a{
+    margin-left: 5px;
+    color: black;
+  
+  }
+  img{
+    margin-left: 5px;
+  }
+  .topofooter{
+    padding-top: 30px;
+  }
+  .insta{
+  
+  margin-right: 5px;
+  }
+  .twit{
+    margin-left: 5px;
+  }
