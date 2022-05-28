@@ -16,18 +16,22 @@ export class CadastroUsuarioComponent implements OnInit {
   constructor(private service :  CadastroUsuarioService) { }
 
   ngOnInit(): void {
-    
-    
+
+
   }
   salvar(usuarioForm: any){
       this.service.metodoPost(usuarioForm.value).subscribe(
         ok =>{ console.log(ok)
+          alert('Usuário cadastrado com sucesso');
         }
         ,
-        error => console.error(error)
+        error => {console.error(error)
+        alert('Erro no cadastro');
+
+        }
 
       )}
 
-  
+
 
 }
