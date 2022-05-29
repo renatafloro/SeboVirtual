@@ -4,6 +4,7 @@ import { AuthguardService } from './authguard.service';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 import { ConsultaProdutoComponent } from './consulta-produto/consulta-produto.component';
 import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
 import { HomeComponent } from './home/home.component';
@@ -54,7 +55,10 @@ const routes: Routes = [
 {
   path:'rodape',
   component: RodapeComponent
-}
+},
+{ path:'categoria',
+  component: CategoriaComponent
+},
 
 ];
 

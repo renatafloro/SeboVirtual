@@ -6,17 +6,17 @@
     <form #f="ngForm" (ngSubmit)="gravar(f.value)">
 
         <div class="ng">
-        <input required minlength="5" class="form-control" type="text" #fcat="ngModel" ngModel name="categoria" placeholder="Informe a Categoria" />
+        <input required minlength="5" class="form-control" type="text" #fcat="ngModel" ngModel name="categoria" placeholder="Informe a Descrição" />
         <div *ngIf="fcat.errors?.['required']" class="ng-invalid">
-        *Informe a categoria 
+        *Informe a descrição do livro
         </div>
         <br>
-        <input required minlength="5" class="form-control" type="text" #fnome="ngModel" ngModel name="descricao" placeholder="Informe descrição do Livro" />
+        <input required minlength="5" class="form-control" type="text" #fnome="ngModel" ngModel name="descricao" placeholder="Informe o Estoque do Livro" />
         <div *ngIf="fnome.errors?.['required']" class="ng-invalid">
-        *Informe a descrição do Livro
+        *Informe o estoque do livro
         </div>
         <br>
-        <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco" placeholder="Informe preço" />
+        <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco" placeholder="Informe o Preço do Livro" />
         <div *ngIf="fpreco.invalid" class="ng-invalid">
             *Informe o preço do produto
         </div>
@@ -36,21 +36,23 @@
         <thead class="">
             <tr>
                 <th>Id</th>
-                <th>Categoria</th>
                 <th>Descrição</th>
+                <th>Estoque</th>
                 <th>Preço</th>
-                <th>Edição</th>
+                <th>Categoria</th>
+                <th>Editar</th>
                 <th>Excluir</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let prod of produtos">
                 <td> {{ prod.id }}</td>
-                <td> {{ prod.categoria }}</td>
                 <td> {{ prod.descricao }}</td>
+                <td> {{ prod.estoque }}</td>
                 <td> {{ prod.preco }}</td>
+                <td> {{ prod.categoria_id}}</td>
                 <td> <a [routerLink]="['/produtos',prod.id]"><i class="material-icons text-dark">mode_edit</i></a></td>
-                <td> <i role="button" class="material-icons text-dark" (click)="excluir(prod.id)">delete</i></td>
+                <td> <i role="button" class="material-icons text-dark" routerLink="home" (click)="excluir(prod.id)">delete</i></td>
             </tr>
         </tbody>
     </table>

@@ -18,7 +18,7 @@
             <label for="">Nome</label>
             <input name="nome" type="text" placeholder="Nome Completo" class="form-control"  ngModel required minlength="3" #nome="ngModel"
             #nomeV="ngModel" />
-            <div style="color: red;" *ngIf="nomeV.hasError('required') && nomeV.touched" >*Informe um nome valido</div>
+            <div style="color: #F89C8B ; font-weight: bold;" *ngIf="nomeV.hasError('required') && nomeV.touched" >*Informe Nome válido</div>
 
           </div>
 
@@ -27,30 +27,30 @@
           <div class="row mb-4">
             <label for="">E-mail</label>
             <input name="email" type="email" placeholder="example@gmail.com" class="form-control" #emailV="ngModel" required email ngModel />
-            <div style="color: red;" *ngIf="emailV.hasError('required')&& emailV.touched" >*Informe um email valido</div>
+            <div style="color: #F89C8B; font-weight: bold;" *ngIf="emailV.hasError('required')&& emailV.touched" >*Informe E-mail válido</div>
           </div>
 
           <div class="row mb-4">
             <label for="">Senha</label>
             <input  name="senha" type="password" placeholder="********" class="form-control" #senha="ngModel" required ngModel/>
-            <div style="color: red;" *ngIf="senha.hasError('required') && senha.touched" >*Informe uma senha valido</div>
+            <div style="color: #F89C8B; font-weight: bold;" *ngIf="senha.hasError('required') && senha.touched" >*Informe uma senha válida</div>
           </div>
 
           <div class="row mb-4">
               <label>CPF</label>
               <input class="form-control" type="text" name="cpf" id="Cpf" placeholder="123.456.789-10" #cpf="ngModel" minlength="11" required  ngModel >
-              <div style="color: red;" *ngIf="cpf.hasError('required') && cpf.touched" >*Informe um cpf valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="cpf.hasError('required') && cpf.touched" >*Informe um cpf válido</div>
             </div>
 
             <div class="row mb-4">
               <label>Telefone</label>
               <input class="form-control" type="text" name="fone" id="fone" placeholder="(00) 00000-0000" #fone="ngModel" required ngModel >
-              <div style="color: red;" *ngIf="fone.hasError('required') && fone.touched" >*Informe um telefone valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="fone.hasError('required') && fone.touched" >*Informe um telefone válido</div>
             </div>
            <div class="row mb-4">
               <label>CEP</label>
               <input class="form-control" type="text" name="cep" id="cep" placeholder="50000-000"  #cep="ngModel" required ngModel >
-              <div style="color: red;" *ngIf="cep.hasError('required') && cep.touched" >*Informe um cep valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="cep.hasError('required') && cep.touched" >*Informe um cep válido</div>
             </div>
             <div class="row mb-4">
               <label>Estado</label>
@@ -88,27 +88,27 @@
             <div class="row mb-4">
               <label>Cidade</label>
               <input class="form-control" type="text" name="cidade" id="cidade" placeholder="Ex: Recife" #cidade="ngModel" required ngModel >
-              <div style="color: red;" *ngIf="cidade.hasError('required') && cidade.touched" >*Informe uma cidade valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="cidade.hasError('required') && cidade.touched" >*Informe sua Cidade</div>
             </div>
             <div class="row mb-4">
               <label>Bairro</label>
               <input class="form-control" type="text" name="bairro" id="bairro" placeholder="Bairro" #bairro="ngModel" required ngModel >
-              <div style="color: red;" *ngIf="bairro.hasError('required') && bairro.touched" >*Informe um bairro valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="bairro.hasError('required') && bairro.touched" >*Informe seu bairro</div>
             </div>
             <div class="row mb-4">
               <label>Rua</label>
               <input class="form-control" type="text" name="rua" id="rua" placeholder="Rua" required ngModel #rua="ngModel" >
-              <div style="color: red;" *ngIf="rua.hasError('required') && rua.touched" >*Informe uma rua valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="rua.hasError('required') && rua.touched" >*Informe sua rua</div>
             </div>
             <div class="row mb-4">
               <label>Número</label>
               <input class="form-control" type="text" name="numero" id="numero" placeholder="" #numero="ngModel" required  ngModel >
-              <div style="color: red;" *ngIf="numero.hasError('required') && numero.touched" >*Informe um número valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="numero.hasError('required') && numero.touched" >*Informe o número da sua casa</div>
             </div>
             <div class="row mb-4">
               <label>Complemento</label>
               <input class="form-control" type="text" name="complemento" id="complemento" placeholder="" #com="ngModel" required ngModel >
-              <div style="color: red;" *ngIf="com.hasError('required') && com.touched" >*Informe um complemento valido</div>
+              <div style="color: #F89C8B; font-weight: bold;" *ngIf="com.hasError('required') && com.touched" >*Informe seu complemento</div>
             </div>
 
 
@@ -120,7 +120,7 @@
               <option value="admin">Cliente</option>
               <option value="padrao">Vendedor</option>
             </select>
-            <div style="color: red;" *ngIf="tipo.hasError('required') && tipo.touched" >*Informe um tipo valido</div>
+            <div style="color: #F89C8B; font-weight: bold;" *ngIf="tipo.hasError('required') && tipo.touched" >*Informe um tipo valido</div>
           </div>
 
           <div class="row d-flex justify-content-center">
@@ -130,7 +130,7 @@
         <hr>
         <p class="text-center">
           Já possui uma conta?
-          <a class="li-ec" routerLink="/login"> Entrar</a>
+          <a class="li-ec" routerLink="/login">Entrar</a>
         </p>
 
       </div>
