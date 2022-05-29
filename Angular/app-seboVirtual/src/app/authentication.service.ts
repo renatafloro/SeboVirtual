@@ -10,7 +10,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) {}
 
     logar(email: string, senha: string){
-    return this.http.post('http://localhost:8080/usuarios/login',{
+    return this.http.post('http://localhost:8080/usuario/logar',{
       email: email,
       senha: senha
     })

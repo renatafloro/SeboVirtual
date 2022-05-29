@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { SobreComponent } from './sobre/sobre.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { CategoriaComponent } from './categoria/categoria.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { RodapeComponent } from './rodape/rodape.component';
     ConsultaProdutoComponent,
     EditaProdutoComponent,
     SobreComponent,
-    RodapeComponent
+    RodapeComponent,
+    CategoriaComponent
   ],
   imports: [
     BrowserModule,

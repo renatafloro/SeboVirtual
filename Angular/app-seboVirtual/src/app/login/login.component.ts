@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from '../usuario.service';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { DecodeTokenService } from '../decode-token.service';
+
 
 
 @Component({
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private auth: AuthenticationService,
-    private decodeToken: DecodeTokenService
+    private decodeToken: DecodeTokenService,
+    private router: Router
     ) { }
 
   usuarios: any = []
@@ -31,13 +33,8 @@ export class LoginComponent implements OnInit {
     this.auth.logar(form.email, form.senha).subscribe(
       token =>{
         localStorage.setItem('token',JSON.stringify(token))}
+       
     )
-  }
-
-  verToken(){
-    let usuario = this.decodeToken.decodeTokenJWT()
-    console.log(usuario)
-
   }
 
   /*fazerLogin(dados: any){
@@ -58,6 +55,7 @@ export class LoginComponent implements OnInit {
         this.usuarioLogado.cpf = dados[i].cpf
         this.usuarioLogado.perfil = dados[i].perfil
         this.gravarDadosLocalStorage()
+        this.router.navigate(['/home'])
       }
     }
   }
@@ -68,5 +66,4 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

@@ -1,0 +1,24 @@
+.container-fluid {
+    background-color: #F8F0E8;
+    }
+
+
+h1 {
+    text-align: center;
+    color: #263238;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+input {
+        border-radius: 25px;
+        background-color: #FCF7F2;
+        border-color: #6AAAAA;
+    }
+
+
+.btn {
+    background-color: #F89C8B;
+    border-radius: 25px;
+    border-color: #6AAAAA;
+    
+    }
