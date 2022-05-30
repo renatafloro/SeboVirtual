@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ export class ProdutoService {
   constructor(private http:HttpClient) { }
 
   gravar(dados:any){
-    console.log(dados)    
+    console.log(dados)
     let url =  'http://localhost:8080/produto'
     return this.http.post(url, dados)
 
@@ -21,11 +22,12 @@ export class ProdutoService {
   }
 
   getOne(idproduto: number){
-    return this.http.get ('http://localhost:8080/produto/id')
+    return this.http.get (`http://localhost:8080/produto/${idproduto}`)
   }
 
   update(dados: any){
-    let url = ('http://localhost:8080/produto/id')
+    let url = (`http://localhost:8080/produto/${dados.id}`)
+    console.log(dados)
     return this.http.put(url, dados)
   }
 

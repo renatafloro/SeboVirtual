@@ -16,7 +16,7 @@ export class CadastroUsuarioComponent implements OnInit {
 
   constructor(private service :  CadastroUsuarioService) {
     this.listaEstados = this.getAllUFs();
-    this.listaPerfis = this.getAllPerfis();  
+    this.listaPerfis = this.getAllPerfis();
   }
 
   ngOnInit(): void {
@@ -57,7 +57,7 @@ export class CadastroUsuarioComponent implements OnInit {
           {
             sigla: "BA",
             nome: "Bahia"
-          }, 
+          },
           {
             sigla: "CE",
             nome: "Ceará"
@@ -150,13 +150,13 @@ export class CadastroUsuarioComponent implements OnInit {
             sigla: "EX",
             nome: "Estrangeiro"
           }
-        ]       
+        ]
       }
 
       private getAllPerfis(): Array<any>{
-      return [ 
+      return [
         {nome: "Vendedor", type: "ADMIN"},
         {nome: "Cliente", type: "USER"}
-      ] 
+      ]
       }
 }
