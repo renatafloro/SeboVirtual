@@ -5,6 +5,13 @@
     <input class="form-control" type="text" placeholder="Informe o preço do livro" [(ngModel)]="produto.preco" />
     <br>
     <input class="form-control" type="text" placeholder="Informe o estoque do livro" [(ngModel)]="produto.estoque" />
+    <br>
+    <select class="form-control" type="text" #fcategorias="ngModel" ngModel name="categoria">
+        <option *ngFor="let categoria of categorias" value ="{{categoria.id}}">
+            {{categoria.nome}}
+        </option>
+    </select>
+    
     <button class="btn btn-primary mt-3" (click)="atualizar()">Gravar</button> {{ msg }}
     <button routerLink="/cadastroproduto" type="reset" class="btn btn-danger mt-3">Cancelar</button>
 </div>

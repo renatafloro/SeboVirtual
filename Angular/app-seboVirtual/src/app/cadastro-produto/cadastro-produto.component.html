@@ -6,24 +6,32 @@
     <form #f="ngForm" (ngSubmit)="gravar(f.value)">
 
         <div class="ng">
-        <input required minlength="5" class="form-control" type="text" #fcat="ngModel" ngModel name="categoria" placeholder="Informe a Descrição" />
-        <div *ngIf="fcat.errors?.['required']" class="ng-invalid">
+        <input required minlength="5" class="form-control" type="text" #fdescricao="ngModel" ngModel name="descricao" placeholder="Informe a Descrição" />
+        <div *ngIf="fdescricao.errors?.['required']" class="ng-invalid">
         *Informe a descrição do livro
         </div>
         <br>
-        <input required minlength="5" class="form-control" type="text" #fnome="ngModel" ngModel name="descricao" placeholder="Informe o Estoque do Livro" />
-        <div *ngIf="fnome.errors?.['required']" class="ng-invalid">
+        <input required minlength="1" class="form-control" type="number" #festoque="ngModel" ngModel name="estoque" placeholder="Informe o Estoque do Livro" />
+        <div *ngIf="festoque.errors?.['required']" class="ng-invalid">
         *Informe o estoque do livro
         </div>
         <br>
         <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco" placeholder="Informe o Preço do Livro" />
         <div *ngIf="fpreco.invalid" class="ng-invalid">
             *Informe o preço do produto
-        </div>
-        
+        </div>  
+        <br>
+        <select required class="form-control" type="text" #fcategorias="ngModel" ngModel name="categoria">
+            <option *ngFor="let categoria of categorias" value ="{{categoria.id}}">
+                {{categoria.nome}}
+            </option>
+
+        </select>
+        <div *ngIf="fcategorias.invalid" class="ng-invalid">
+            *Selecione a categoria do livro
+        </div>   
         </div>
 
-        
         <div class="mt-3 mb-3">
             <button [disabled]="f.invalid" class="btn btn-primary me-2">Salvar</button>
             <button type="reset" class="btn btn-danger">Cancelar</button>
@@ -50,9 +58,9 @@
                 <td> {{ prod.descricao }}</td>
                 <td> {{ prod.estoque }}</td>
                 <td> {{ prod.preco }}</td>
-                <td> {{ prod.categoria_id}}</td>
+                <td> {{ prod.categoria.nome}}</td>
                 <td> <a [routerLink]="['/produtos',prod.id]"><i class="material-icons text-dark">mode_edit</i></a></td>
-                <td> <i role="button" class="material-icons text-dark" routerLink="home" (click)="excluir(prod.id)">delete</i></td>
+                <td> <i role="button" class="material-icons text-dark" (click)="excluir(prod.id)">delete</i></td>
             </tr>
         </tbody>
     </table>

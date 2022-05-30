@@ -54,36 +54,11 @@
             </div>
             <div class="row mb-4">
               <label>Estado</label>
-              <select name="estado" id="estado"  required>
-                <option value="AC">Acre</option>
-                <option value="AL">Alagoas</option>
-                <option value="AP">Amapá</option>
-                <option value="AM">Amazonas</option>
-                <option value="BA">Bahia</option>
-                <option value="CE">Ceará</option>
-                <option value="DF">Distrito Federal</option>
-                <option value="ES">Espírito Santo</option>
-                <option value="GO">Goiás</option>
-                <option value="MA">Maranhão</option>
-                <option value="MT">Mato Grosso</option>
-                <option value="MS">Mato Grosso do Sul</option>
-                <option value="MG">Minas Gerais</option>
-                <option value="PA">Pará</option>
-                <option value="PB">Paraíba</option>
-                <option value="PR">Paraná</option>
-                <option value="PE">Pernambuco</option>
-                <option value="PI">Piauí</option>
-                <option value="RJ">Rio de Janeiro</option>
-                <option value="RN">Rio Grande do Norte</option>
-                <option value="RS">Rio Grande do Sul</option>
-                <option value="RO">Rondônia</option>
-                <option value="RR">Roraima</option>
-                <option value="SC">Santa Catarina</option>
-                <option value="SP">São Paulo</option>
-                <option value="SE">Sergipe</option>
-                <option value="TO">Tocantins</option>
-                <option value="EX">Estrangeiro</option>
-            </select>
+              <select required class="form-control" type="text" #festados="ngModel" ngModel name="estado">
+                <option *ngFor="let estado of listaEstados" value ="{{estado.sigla}}">
+                    {{estado.nome}}
+                </option>    
+              </select>
             </div>
             <div class="row mb-4">
               <label>Cidade</label>
@@ -111,16 +86,13 @@
               <div style="color: #F89C8B; font-weight: bold;" *ngIf="com.hasError('required') && com.touched" >*Informe seu complemento</div>
             </div>
 
-
           <div class="row mb-4">
             <label for="">Tipo de usuário</label>
-            <select name="select" id="tipo" class="form-control" placeholder='Selecione o tipo de usuário' #tipo="ngModel" required ngModel >
-
-
-              <option value="admin">Cliente</option>
-              <option value="padrao">Vendedor</option>
-            </select>
-            <div style="color: #F89C8B; font-weight: bold;" *ngIf="tipo.hasError('required') && tipo.touched" >*Informe um tipo valido</div>
+            <select required class="form-control" type="text" #fperfis="ngModel" ngModel name="perfil">
+              <option *ngFor="let perfil of listaPerfis" value ="{{perfil.type}}">
+                  {{perfil.nome}}
+              </option>    
+            </select>            
           </div>
 
           <div class="row d-flex justify-content-center">

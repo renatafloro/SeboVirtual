@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient, HttpHeaders} from '@angular/common/http'
+import { environment } from 'src/environments/environment';
+import { LoginComponent } from './login/login.component';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +11,10 @@ import {HttpClient} from '@angular/common/http'
 export class AuthenticationService {
 
   constructor(private http: HttpClient) {}
+
+  /*logar(login:LoginComponent): Observable<LoginComponent>{
+    return this.http.post<LoginComponent>('http://localhost:8080/usuario/logar', login)
+  }*/
 
     logar(email: string, senha: string){
     return this.http.post('http://localhost:8080/usuario/logar',{

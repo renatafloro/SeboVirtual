@@ -9,8 +9,8 @@ export class ProdutoService {
   constructor(private http:HttpClient) { }
 
   gravar(dados:any){
+    console.log(dados)    
     let url =  'http://localhost:8080/produto'
-    console.log(dados)
     return this.http.post(url, dados)
 
   }
@@ -30,6 +30,6 @@ export class ProdutoService {
   }
 
   excluir(idproduto:number){
-    return this.http.delete('http://localhost:8080/produto/id')
+    return this.http.delete(`http://localhost:8080/produto/${idproduto}`)
   }
 }

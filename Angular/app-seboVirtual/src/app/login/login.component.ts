@@ -32,9 +32,10 @@ export class LoginComponent implements OnInit {
   logar(form: any){
     this.auth.logar(form.email, form.senha).subscribe(
       token =>{
-        localStorage.setItem('token',JSON.stringify(token))}
-       
-    )
+        localStorage.setItem('token',JSON.stringify(token));
+      } 
+    ); 
+    this.router.navigate(['/home']);
   }
 
   /*fazerLogin(dados: any){
@@ -45,7 +46,7 @@ export class LoginComponent implements OnInit {
     })
   }
 */
-  verificarLogin(email: string, senha: string, dados: any){
+ /* verificarLogin(email: string, senha: string, dados: any){
     
     for(let i = 0; i < dados.length; i++) {
       if( email == dados[i].email && senha == dados[i].senha) {
@@ -58,7 +59,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home'])
       }
     }
-  }
+  }*/
 
   gravarDadosLocalStorage(){
     localStorage.setItem("userLogado", JSON.stringify(this.usuarioLogado))

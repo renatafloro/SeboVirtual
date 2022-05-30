@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoriaService } from '../categoria.service';
 import { ProdutoService } from '../produto.service';
 
 @Component({
@@ -9,12 +10,15 @@ import { ProdutoService } from '../produto.service';
 export class CadastroProdutoComponent implements OnInit {
   msg: string = ""
   produtos: any;
+  categorias: any;
 
-  constructor(private serviceProduto: ProdutoService) {
+  constructor(private serviceProduto: ProdutoService, private serviceCategoria: CategoriaService) {
     this.serviceProduto.getAll().subscribe(x => this.produtos = x)
-   }
+    this.serviceCategoria.getAll().subscribe(x=> this.categorias =x)
+    }
 
   gravar(dados: any){
+    dados.categoria = {id: dados.categoria }
     this.serviceProduto.gravar(dados).subscribe(x => window.location.reload())
   }
     
@@ -26,7 +30,13 @@ export class CadastroProdutoComponent implements OnInit {
   
   }
 
-  excluir(id:any){
-     this.serviceProduto.excluir(id).subscribe(x => {window.location.reload()})
+  excluir(id:number){
+    console.log(id);
+    this.serviceProduto.excluir(id).subscribe(x => 
+      {
+        alert("Produto excluído com sucesso!")
+        window.location.reload()
+      }
+      )
   }
 }

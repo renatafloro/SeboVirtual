@@ -17,7 +17,8 @@ export class CategoriaService {
     return this.http.get(url)
   }
 
-  getOne(nome : String){
+  getAllByName(nome : String){
     return this.http.get ('http://localhost:8080/categoria/nome')
   }
+  
 }
