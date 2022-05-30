@@ -12,11 +12,11 @@ export class EditaProdutoComponent implements OnInit {
     produto: any = {};
     msg: string = "";
     categorias: any;
-    
+
     constructor(private route:ActivatedRoute,
       private router:Router,
       private serviceProduto: ProdutoService,
-      private serviceCategoria: CategoriaService) { 
+      private serviceCategoria: CategoriaService) {
         this.serviceCategoria.getAll().subscribe(x=> this.categorias =x)
       }
 
@@ -24,10 +24,11 @@ export class EditaProdutoComponent implements OnInit {
     let routeParams = this.route.snapshot.paramMap;
     let idproduto: number = Number(routeParams.get('idproduto'))
     this.serviceProduto.getOne(idproduto).subscribe(x=> this.produto = x)
+
   }
 
   atualizar(): void {
-    this.serviceProduto.update(this.produto).subscribe(x=> this.msg = "Atualizado com sucesso.")
+    this.serviceProduto.update(this.produto).subscribe(x => this.categorias = x )
     this.router.navigate(["/cadastroproduto"]);
     }
 
