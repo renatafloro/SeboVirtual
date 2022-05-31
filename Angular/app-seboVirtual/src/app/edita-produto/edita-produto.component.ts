@@ -30,6 +30,8 @@ export class EditaProdutoComponent implements OnInit {
   atualizar(): void {
     this.serviceProduto.update(this.produto).subscribe(x => this.categorias = x )
     this.router.navigate(["/cadastroproduto"]);
+    alert("Produto editado com sucesso!")
+    
     }
 
   }
