@@ -12,11 +12,7 @@ export class AuthenticationService {
 
   constructor(private http: HttpClient) {}
 
-  /*logar(login:LoginComponent): Observable<LoginComponent>{
-    return this.http.post<LoginComponent>('http://localhost:8080/usuario/logar', login)
-  }*/
-
-    logar(email: string, senha: string){
+  logar(email: string, senha: string){
     return this.http.post('http://localhost:8080/usuario/logar',{
       email: email,
       senha: senha

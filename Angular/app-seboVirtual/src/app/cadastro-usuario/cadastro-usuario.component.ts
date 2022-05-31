@@ -1,6 +1,7 @@
 import { AuthguardService } from './../authguard.service';
 import { Component, OnInit } from '@angular/core';
 import { CadastroUsuarioService } from '../cadastro-usuario.service';
+import { Router } from '@angular/router';
 
 
 
@@ -11,10 +12,13 @@ import { CadastroUsuarioService } from '../cadastro-usuario.service';
 })
 export class CadastroUsuarioComponent implements OnInit {
 
+ 
   listaEstados: any;
   listaPerfis: any;
 
-  constructor(private service :  CadastroUsuarioService) {
+  constructor(
+    private service :  CadastroUsuarioService,
+    private router: Router){
     this.listaEstados = this.getAllUFs();
     this.listaPerfis = this.getAllPerfis();
   }
@@ -26,15 +30,16 @@ export class CadastroUsuarioComponent implements OnInit {
   salvar(usuarioForm: any){
       this.service.metodoPost(usuarioForm.value).subscribe(
         ok =>{ console.log(ok)
-          alert('Usuário cadastrado com sucesso');
+          alert('Usuário cadastrado com sucesso!');
         }
         ,
         error => {console.error(error)
-        alert('Erro no cadastro');
+        alert('Erro no cadastro, tente novamente.');
 
         }
-
-      )}
+        
+      );this.router.navigate(['/login']);
+        }
 
       private getAllUFs(): Array<any>{
         return [
@@ -154,8 +159,8 @@ export class CadastroUsuarioComponent implements OnInit {
       }
 
       private getAllPerfis(): Array<any>{
-      return [
-        {nome: "Vendedor", type: "ADMIN"},
+	return [ 
+        {nome: "Vendedor", type: "ADM"},
         {nome: "Cliente", type: "USER"}
       ]
       }

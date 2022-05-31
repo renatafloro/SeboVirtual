@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthLoginService } from './auth-login.service';
 import { AuthguardService } from './authguard.service';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
@@ -37,6 +38,10 @@ const routes: Routes = [
 {
   path: 'login',
   component: LoginComponent
+},
+{path : 'perfil/:idusuario',
+ component: CadastroUsuarioComponent,
+canActivate:[AuthLoginService]
 },
 {
   path:'cadastrousuario',

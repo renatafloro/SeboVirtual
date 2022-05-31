@@ -59,8 +59,8 @@
                 <td> {{ prod.estoque }}</td>
                 <td> {{ prod.preco }}</td>
                 <td> {{ prod.categoria.nome}}</td>
-                <td> <a [routerLink]="['/produtos',prod.id]"><i class="material-icons text-dark">mode_edit</i></a></td>
-                <td> <i role="button" class="material-icons text-dark" (click)="excluir(prod.id)">delete</i></td>
+                <td> <a [routerLink]="['/produtos',prod.id]"><i class="material-icons">mode_edit</i></a></td>
+                <td > <i role="button" class="material-icons" (click)="excluir(prod.id)">delete</i></td>
             </tr>
         </tbody>
     </table>

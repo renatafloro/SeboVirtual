@@ -1,5 +1,8 @@
 <div class="container">
+    <br>
     <h1 class="text-center">Edição de Produtos</h1>
+    <br>
+    
     <input class="form-control" type="text" placeholder="Informe a descrição do livro" [(ngModel)]="produto.descricao" />
     <br>
     <input class="form-control" type="text" placeholder="Informe o preço do livro" [(ngModel)]="produto.preco" />
@@ -11,7 +14,7 @@
             {{categoria.nome}}
         </option>
     </select>
-
     <button class="btn btn-primary mt-3" (click)="atualizar()">Gravar</button> {{ msg }}
     <button routerLink="/cadastroproduto" type="reset" class="btn btn-danger mt-3">Cancelar</button>
+    <hr>
 </div>

@@ -10,6 +10,7 @@ export class DecodeTokenService {
       let token = localStorage.getItem('token') || '';
       return jwt(token);
     } catch (error) {
+      console.log(`error ${error}`)
       return '';
     }
   }
