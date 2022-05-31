@@ -1,5 +1,5 @@
 .container-fluid {
-background-color: #F8F0E8;
+background-color: #f8f0e8;
  }
 
 h1{
@@ -16,11 +16,11 @@ table{
    background-color:#FFC8B7;
 }
 
-input {
-    border-radius: 25px;
-    background-color: #FCF7F2;
-    border-color: #6AAAAA;
-  }
+.form-control{
+  border-radius: 25px;
+  background-color: #FCF7F2;
+  border-color: #6AAAAA;
+}
   
 .ng{
   font-family: 'Courier New', Courier, monospace;
@@ -33,4 +33,13 @@ input {
     border-radius: 25px;
     border-color: #6AAAAA;
     
+  }
+  .material-icons{
+    color: #6AAAAA;
+  }
+  .material-icons:hover{
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+    transform: scale(1.2);
   }

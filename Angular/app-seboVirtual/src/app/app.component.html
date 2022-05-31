@@ -24,9 +24,6 @@
        <li class="nav-item">
           <a class="nav-link active" aria-current="page" routerLink="cadastroproduto">Cadastrar</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="categoria">Categoria</a>
-        </li>
        <li class="nav-item">
           <i class="nav-link active" aria-current="page" i class="fa fa-shopping-cart i"  routerLink="carrinho">  </i>
         </li>
@@ -36,8 +33,8 @@
       </ul>
     </div>
   </div>
-  <label *ngIf="!usuarioLogado.email">{{usuarioLogado.nome}}</label>
 </nav>
 
 <router-outlet></router-outlet>
-<app-rodape></app-rodape>
+<!--<app-rodape></app-rodape>-->
+  

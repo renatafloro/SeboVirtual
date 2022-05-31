@@ -1,7 +1,12 @@
 .livro__login{
   max-width: 80%;
-  margin-top: 5%;
+  margin-top: 3%;
   margin-left: 12%;
+}
+
+html,body{
+  height: 100%;
+  overflow-y: hidden;
 }
 
 .container-fluid {
