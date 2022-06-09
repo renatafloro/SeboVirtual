@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Akshar'; 
+  }  
+    
+    #container {
+    margin-top: 100px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 500px;
+    
+    }
+
+    h2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: bold;
+        color:  #F89C8B;
+        font-size: 70px;
+    }
+
+    .img{
+        left: 200px;    
+    }
+    
+    hr {
+    color: #F89C8B;
+    margin-top: 10px;
+    width: 75%;
+    }
+    
+    .lista-compras {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 15px 200px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
+    height: 140px;
+    border: 1px solid #e9e9e9;
+    border-radius: 20px;
+    }
+    
+    .foto-produto img {
+    width: 100px;
+    }
+    
+    .descricao{
+    font-family: 'Akshar';
+    font-weight: bold;
+    margin: 5px 0;
+    font-size: 18px;
+    }
+    
+    .valor h5 {
+    font-weight: bold;
+    margin: 5px 0;
+    font-family: 'Akshar';
+    }
+     
+    .carrinho-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    }
+        
+    .valor-total {
+    padding: 15px 50px;
+    margin: 5px 0;
+    width: 75%;
+    font-weight: bold;
+    font-family: 'Akshar';
+    }
+    
+    .buttons {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 25px;
+    width: 100vw;
+    }
+    
+    button {
+    color: #FEFAE0;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: #6AAAAA;
+    width: 270px;
+    height: 50px;
+    border-radius: 25px;
+    border-color:   #F89C8B;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
+    }
+        
+    button:hover {
+    background-color:  #F89C8B;
+    border-color:   #6AAAAA;
+    transform: scale(1.05);
+    transition: 0.3s;
+    }
+   
+    .limpar {
+    background: none;
+    color: #283618;
+    }
+   
+    .limpar:hover {
+    background: #FFC8B7;
+    color: #283618;
+    }
+        
+    .margem{
+    margin-top: 80px;
+    }

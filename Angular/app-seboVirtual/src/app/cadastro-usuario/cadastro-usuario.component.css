@@ -34,7 +34,7 @@ h1 {
 
 label {
   color: #263238;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Akshar';
   font-weight: bold;
 }
 
@@ -43,15 +43,15 @@ hr {
 }
 
 ::placeholder{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Akshar';
 }
 
 select{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Akshar';
 }
 
 option{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Akshar';
 }
 
 .btn {
@@ -67,18 +67,18 @@ option{
   color: white;
 }
 .li-ec{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Akshar';
   font-weight: bold;
   color: #6AAAAA;
 }
 
 p{
-  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Akshar';
   font-weight: bold;
   color: #F89C8B;
 }
 
 .ng{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Akshar';
   font-weight: bold;
 }

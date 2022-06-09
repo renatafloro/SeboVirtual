@@ -15,5 +15,10 @@ export class CarrinhoService {
   public listarItens(): Produto[]{
    return this.produtosCarrinho
   }
+  limpar(){
+    this.produtosCarrinho=[];
+    return this.produtosCarrinho
+  }
+
 
 }

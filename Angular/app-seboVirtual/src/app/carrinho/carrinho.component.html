@@ -1,23 +1,42 @@
 <div id="container">
- <div class="title">
-<h3>Minhas compras</h3>
-</div> <hr> <div class="carrinho-produto"> <div class="lista-compras" *ngFor="let item of listaProdutos"> <div class="foto-produto">
-<img [src]="item.foto" alt="foto do produto" />
-</div> <div class="descricao">
-<h5>Produto:</h5>
-<p>Categoria: {{ item.categoria.nome }}</p>
-<p>Descricao: {{ item.descricao }}</p>
-</div> <div class="valor">
-<h5>Preço:</h5>
-<h5>{{ item.preco | currency: "BRL" }}</h5>
-</div> </div> <div class="carrinho-final"> <h5 class="valor-total">
-VALOR TOTAL: {{ total() | currency: "BRL" }}
-</h5> <hr> <div class="buttons">
-<button class="btn btn-warning btn-block limpar" (click)="limpar()" routerLink="/produtoslista">Limpar carrinho</button>
-<button class="btn btn-success btn-block" routerLink="/produtoslista">Continuar comprando</button>
-<button class="btn btn-success btn-block" (click)="finalizar()">Finalizar compra</button>
-</div>
-</div> </div>
-</div>
+  <div class="title">
 
+    <div>
+      <div class="row">
+        <div class="col-md-5 img">
+          <img src="../../assets/img/carrinho.png" alt="imagemCarrinho" width="450px" height="300px">
 
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <h2>Carrinho de compras</h2>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="carrinho-produto">
+      <div class="lista-compras" *ngFor="let item of listaProdutos">
+        <div class="foto-produto">
+          <img [src]="item.foto" alt="foto do produto" />
+        </div>
+        <div class="descricao">
+          <p>Categoria: {{ item.categoria.nome }}</p>
+          <p>Descricao: {{ item.descricao }}</p>
+        </div>
+        <div class="valor">
+          <h5>Preço:</h5>
+          <h5>{{ item.preco | currency: "BRL" }}</h5>
+        </div>
+      </div>
+      <div class="carrinho-final">
+        <h5 class="valor-total">
+          VALOR TOTAL: {{ total() | currency: "BRL" }}
+        </h5>
+        <hr>
+        <div class="buttons">
+          <button class="btn btn-block limpar" (click)="limpar()" routerLink="/produtoslista">Limpar carrinho</button>
+          <button class="btn btn-block" routerLink="/produtoslista">Continuar comprando</button>
+          <button class="btn btn-block" (click)="finalizar()">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>

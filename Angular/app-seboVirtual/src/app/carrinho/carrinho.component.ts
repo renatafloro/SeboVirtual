@@ -6,27 +6,31 @@ import { Produto } from '../models/produto.model';
 @Component({
   selector: 'app-carrinho',
   templateUrl: './carrinho.component.html',
-  styleUrls: ['./carrinho.component.css']
+  styleUrls: ['./carrinho.component.css'],
 })
 export class CarrinhoComponent implements OnInit {
-  listaProdutos: Produto[]= [];
-  
+  listaProdutos: Produto[] = [];
+  comprados= this.carrinhoService.listarItens();
+
   constructor(
     private carrinhoService: CarrinhoService,
-    private router: Router,
-  ) { }
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.listaProdutos= this.carrinhoService.listarItens()
-  }
-  limpar(){
-
-  }
-  finalizar(){
-
-  }
-  total(){
-    return 0
+    this.listaProdutos = this.carrinhoService.listarItens();
   }
 
+  limpar() {
+    this.carrinhoService.limpar();
+    window.location.reload()
+  }
+
+  finalizar() {
+
+  }
+
+  total() {
+    return this.comprados.map((item) => item.preco).reduce((a, b) => a + b, 0);
+  }
 }
