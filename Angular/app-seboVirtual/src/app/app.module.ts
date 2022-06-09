@@ -9,7 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
 import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.component';
-import { ConsultaProdutoComponent } from './consulta-produto/consulta-produto.component';
+import { ProdutoComponent } from './produto/consulta-produto.component';
 import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
@@ -26,7 +26,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
     LoginComponent,
     PagamentoComponent,
     CadastroProdutoComponent,
-    ConsultaProdutoComponent,
+    ProdutoComponent,
     EditaProdutoComponent,
     SobreComponent,
     RodapeComponent,

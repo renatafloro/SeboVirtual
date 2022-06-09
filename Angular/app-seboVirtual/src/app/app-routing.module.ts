@@ -6,7 +6,7 @@ import { CadastroProdutoComponent } from './cadastro-produto/cadastro-produto.co
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { CarrinhoComponent } from './carrinho/carrinho.component';
 import { CategoriaComponent } from './categoria/categoria.component';
-import { ConsultaProdutoComponent } from './consulta-produto/consulta-produto.component';
+import { ProdutoComponent } from './produto/consulta-produto.component';
 import { EditaProdutoComponent } from './edita-produto/edita-produto.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -48,8 +48,8 @@ canActivate:[AuthLoginService]
   component: CadastroUsuarioComponent
 },
 {
-  path:'consultaproduto',
-  component: ConsultaProdutoComponent
+  path:'produto',
+  component: ProdutoComponent
 },
 
 {

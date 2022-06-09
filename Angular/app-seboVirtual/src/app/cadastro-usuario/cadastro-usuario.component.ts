@@ -164,4 +164,5 @@ export class CadastroUsuarioComponent implements OnInit {
         {nome: "Cliente", type: "USER"}
       ]
       }
+      
 }

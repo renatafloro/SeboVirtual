@@ -1,5 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Categoria } from './models/categoria.model';
 
 
 
@@ -7,18 +9,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CategoriaService {
+  private url: string= 'http://localhost:8080/categoria'
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getAll(){
-    let url = 'http://localhost:8080/categoria'
-    return this.http.get(url)
+  getAll(): Observable<Categoria[]>{
+    return this.http.get<Categoria[]>(this.url)
   }
 
   getAllByName(nome : String){
-    return this.http.get ('http://localhost:8080/categoria/nome')
+    return this.http.get (`${this.url}/nome`)
   }
   
 }

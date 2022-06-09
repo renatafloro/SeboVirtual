@@ -1,0 +1,38 @@
+<div class="container">
+  <select required class="form-control" type="text" #fcategorias="ngModel" ngModel name="categoria">
+    <option *ngFor="let categoria of categorias" value="{{categoria.id}}">
+      {{categoria.nome}}
+    </option>
+  </select>
+
+  <div class="row d-flex justify-content-center">
+    <div class="produto-card">
+      <div class="card" *ngFor="let produto of listaProdutos">
+        <a routerLink="/produto">
+          <img width="200px" height="200px" alt="Card image cap" [src]="produto.foto" class="imagem-card" />
+        </a>
+        <hr>
+        <div class="card-body p-0">
+            <p class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6">
+              {{produto.categoria.nome}}
+            </p>
+        <div class="card-body p-0">
+          <p class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6">
+            {{ produto.descricao }}
+          </p>
+          <div class="d-flex flex-column justify-content-between m-2">
+            <small class="m-1 font">Valor: {{produto.preco}}</small>
+          </div>
+
+
+
+        </div>
+        <hr>
+        <button class="btn w-100 comprar" (click)="getProdutoById(produto.id)">
+            <i class="fa fa-cart-plus mr-2" aria-hidden="true"></i>
+            <span>Comprar</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
