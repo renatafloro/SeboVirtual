@@ -1,10 +1,33 @@
 .navbar{
-    background-color: #FFFAF9;
-   
+    background-color: #FFFAF9;  
 }
+
+.nav-item{
+    padding: 10 10px;
+    
+}
+.x{
+    color: #6AAAAA;
+    font-family: 'Almendra SC';
+    font-style: normal;
+    font-size: 30px;
+}
+.name{
+    color: #6AAAAA;
+    font-family: 'Akshar';
+    font-size: 20px;
+    font-weight: bold;
+}
+.mx-auto:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+}
+
 .nav-link{
     color: #6AAAAA;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Akshar';
     font-size: 20px;
     font-weight: bold;
     padding: 0 20px;
@@ -20,6 +43,7 @@
 }
 .fa{
     color: #6AAAAA;
+    padding: 6px;
 }
 
 .fa:hover {
