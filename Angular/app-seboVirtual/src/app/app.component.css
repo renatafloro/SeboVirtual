@@ -1,21 +1,22 @@
 .navbar{
-    background-color: #FFFAF9;  
+    background-color: #FFFAF9;
 }
 
 .nav-item{
     padding: 10 10px;
-    
+
 }
 .x{
     color: #6AAAAA;
     font-family: 'Almendra SC';
     font-style: normal;
-    font-size: 30px;
+    font-size: 40px;
+    margin-left: 10px;
 }
 .name{
     color: #6AAAAA;
     font-family: 'Akshar';
-    font-size: 20px;
+    font-size: 27px;
     font-weight: bold;
 }
 .mx-auto:hover{
@@ -24,6 +25,7 @@
     transition-timing-function: ease-in;
     transition-property: all;
 }
+
 
 .nav-link{
     color: #6AAAAA;
@@ -39,7 +41,7 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-property: all;
-   
+
 }
 .fa{
     color: #6AAAAA;
@@ -52,4 +54,49 @@
     transition-duration: 0.3s;
     transition-timing-function: ease-in;
     transition-property: all;
+}
+
+/*DROPDOWN MENU*/
+.dropbtn {
+  background-color: #FFFAF9;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 42px;
+  min-width: 100px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: black;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 4px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #6aaaaa9c;
+  border: 1px solid #6aaaaa9c;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/*hover menu*/
+.dropbtn:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-property: all;
 }
