@@ -5,6 +5,17 @@
 
 <!--Nome-->
   <div class="navbar-collapse collapse w-100 order-0 order-md-0 dual-collapse2">
+     <!--menu sanduiche-->
+     <div class="dropdown">
+      <button class="dropbtn"> <img src="../assets/img/MENU.png" alt="#" width="40px" height="40px"></button>
+
+      <div class="dropdown-content">
+          <a routerLink="produto">Livros</a>
+          <a routerLink="sobre">Sobre</a>
+          <a routerLink="cadastroproduto">Cadastrar</a>
+      </div>
+    </div>
+        <!--fim dropdown menu-->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <span class="x">X</span>
@@ -23,15 +34,6 @@
  <!--Itens-->
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="conteudoNavbarSuportado">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" routerLink="produto">Livros</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" routerLink="sobre">Sobre</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" aria-current="page" routerLink="cadastroproduto">Cadastrar</a>
-      </li>
       <li class="nav-item">
         <a class="nav-link" aria-current="page" routerLink="login"> <i class="fa fa-user i"></i></a>
       </li>
