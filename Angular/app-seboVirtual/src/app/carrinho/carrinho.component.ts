@@ -33,4 +33,9 @@ export class CarrinhoComponent implements OnInit {
   total() {
     return this.comprados.map((item) => item.preco).reduce((a, b) => a + b, 0);
   }
+  
+  excluir(id:number){
+    this.carrinhoService.excluir(id) 
+        alert("Produto excluído com sucesso!")
+  }
 }

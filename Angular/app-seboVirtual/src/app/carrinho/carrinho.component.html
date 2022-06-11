@@ -26,6 +26,9 @@
           <h5>Preço:</h5>
           <h5>{{ item.preco | currency: "BRL" }}</h5>
         </div>
+        <div>
+          <i role="button" class="material-icons" (click)="excluir(item.id)">delete</i>
+        </div>
       </div>
       <div class="carrinho-final">
         <h5 class="valor-total">
@@ -34,7 +37,7 @@
         <hr>
         <div class="buttons">
           <button class="btn btn-block limpar" (click)="limpar()" routerLink="/produtoslista">Limpar carrinho</button>
-          <button class="btn btn-block" routerLink="/produtoslista">Continuar comprando</button>
+          <button class="btn btn-block" routerLink="/produto">Continuar comprando</button>
           <button class="btn btn-block" (click)="finalizar()">Finalizar compra</button>
         </div>
       </div>
