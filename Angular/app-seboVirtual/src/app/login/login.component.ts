@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   usuarios: any = []
 
   usuarioLogado= {
+    id: "",
     nome: "",
     email: "",
     senha: "",
@@ -34,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.auth.logar(form.email, form.senha).subscribe(
       token =>{
         localStorage.setItem('token',JSON.stringify(token));
-        this.router.navigate(['/home']);
+        window.location.reload()
       }
     );
   }
@@ -50,6 +51,7 @@ export class LoginComponent implements OnInit {
 
     for(let i = 0; i < dados.length; i++) {
       if( email == dados[i].email && senha == dados[i].senha) {
+        this.usuarioLogado.id = dados[i].id
         this.usuarioLogado.nome = dados[i].nome
         this.usuarioLogado.email = dados[i].email
         this.usuarioLogado.senha = dados[i].senha
