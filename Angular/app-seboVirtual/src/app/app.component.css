@@ -7,25 +7,18 @@
 
 }
 .x{
-    color: #6AAAAA;
-    font-family: 'Almendra SC';
+    color: #F89C8B;
+    font-family: 'Artifika';
     font-style: normal;
-    font-size: 40px;
+    font-size: 30px;
     margin-left: 10px;
 }
 .name{
     color: #6AAAAA;
     font-family: 'Akshar';
-    font-size: 27px;
-    font-weight: bold;
+    font-size: 24px;
+    
 }
-.mx-auto:hover{
-    transform: scale(1.1);
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in;
-    transition-property: all;
-}
-
 
 .nav-link{
     color: #6AAAAA;
@@ -70,33 +63,25 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 42px;
-  min-width: 100px;
+  top: 35px;
+  min-width: 90px;
   z-index: 1;
 }
 
 .dropdown-content a {
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
+  font-family: 'Akshar';
   color: black;
   padding-top: 7px;
-  padding-bottom: 7px;
+  padding-bottom: 5px;
   padding-left: 4px;
   text-decoration: none;
   display: block;
 }
 .dropdown-content a:hover {
-  background-color: #6aaaaa9c;
+  background-color: #F89C8B;
   border: 1px solid #6aaaaa9c;
   border-radius: 8px;
 }
 
 .dropdown:hover .dropdown-content {display: block;}
 
-/*hover menu*/
-.dropbtn:hover {
-  transform: scale(1.1);
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  transition-property: all;
-}

@@ -13,7 +13,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient) {}
 
   logar(email: string, senha: string){
-    return this.http.post('https://ms-usuarios.herokuapp.com/usuario/logar',{
+    return this.http.post('https://ms-usuarios.herokuapp.com/usuarios/login',{
       email: email,
       senha: senha
     })

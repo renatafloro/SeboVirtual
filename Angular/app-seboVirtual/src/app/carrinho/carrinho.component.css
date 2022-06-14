@@ -18,11 +18,16 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: bold;
         color:  #F89C8B;
-        font-size: 70px;
+        font-size: 40px;
+        text-align: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #6AAAAA
+        
+        
     }
 
     .img{
-        left: 200px;    
+        left: 125px;    
     }
     
     hr {

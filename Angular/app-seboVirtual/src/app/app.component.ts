@@ -9,7 +9,7 @@ import { AuthguardService } from './authguard.service';
 })
 export class AppComponent {
   title = 'app-seboVirtual';
-  
+
   usuarioLogado: any ={};
   administrador:boolean = true
   usuarioConectado: boolean = false
@@ -17,10 +17,11 @@ export class AppComponent {
 
   pegarPerfilUsuarioConectado(){
     let user: (string | null) = localStorage.getItem("userConectado")
-    if(user != null)
-       user = JSON.parse(user)
+    if(user != null) {
+      user = JSON.parse(user)
+      this.usuarioConectado = true;
+    }
     this.usuarioLogado = user
-    console.log(this.usuarioLogado)
   }
 
 constructor(
@@ -33,6 +34,7 @@ constructor(
 
   logout(){
     localStorage.removeItem("token")
+    this.usuarioConectado = false;
     this.router.navigate(['/home'])
   }
 }

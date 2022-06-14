@@ -14,6 +14,7 @@ import { DecodeTokenService } from '../decode-token.service';
 export class LoginComponent implements OnInit {
 
   constructor(
+    private serviceUsuario: UsuarioService,
     private auth: AuthenticationService,
     private decodeToken: DecodeTokenService,
     private router: Router
@@ -33,21 +34,20 @@ export class LoginComponent implements OnInit {
     this.auth.logar(form.email, form.senha).subscribe(
       token =>{
         localStorage.setItem('token',JSON.stringify(token));
-      } 
-    ); 
-    this.router.navigate(['/home']);
+        this.router.navigate(['/home']);
+      }
+    );
   }
 
-  /*fazerLogin(dados: any){
-
-    this.UsuarioService.getAll().subscribe(x => {
-      this.usuarios = x
-      this.verificarLogin(dados.email, dados.senha, this.usuarios)
+  fazerLogin(dados: any){
+    this.serviceUsuario.getAll().subscribe(x => {
+    this.usuarios = x
+    this.verificarLogin(dados.email, dados.senha, this.usuarios)
     })
   }
-*/
- /* verificarLogin(email: string, senha: string, dados: any){
-    
+
+  verificarLogin(email: string, senha: string, dados: any){
+
     for(let i = 0; i < dados.length; i++) {
       if( email == dados[i].email && senha == dados[i].senha) {
         this.usuarioLogado.nome = dados[i].nome
@@ -59,7 +59,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home'])
       }
     }
-  }*/
+  }
 
   gravarDadosLocalStorage(){
     localStorage.setItem("userLogado", JSON.stringify(this.usuarioLogado))

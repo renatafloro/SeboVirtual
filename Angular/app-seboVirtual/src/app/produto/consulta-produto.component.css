@@ -1,13 +1,32 @@
+h2{
+color: #263238;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+text-align: center;
+
+}
+
 .card-text{
-font-weight: bold
+font-weight: bold;
+word-wrap: break-word;
+
 }
 .font {
 font-size: 1rem
 }
 .card {
-border-radius: 10%;
-padding: 20px;
-margin: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
+    height: 140px;
+    border: 1px solid #e9e9e9;
+    border-radius: 20px;
+    background-color: #F8F0E8;
+    overflow: hidden;
+   
+    
 }
 .card:hover{
 transform: scale(1.05);
@@ -17,9 +36,25 @@ transition-property: all;
 }
 hr{
 margin: 0;
+color: #F89C8B;
 }
 .comprar:hover{
-background-color: #283618;
+background-color:#F89C8B;
 color: white
+}
+select{
+    border-radius: 25px;
+    border-width: 3px;
+    border-color: #6AAAAA;
+    color: #6AAAAA;
+    font-size: 15px;
+    outline: none;
+    height: 40px;
+    width: 250px;
+}
+small{
+    font-weight: bold;
+    color: #6AAAAA;
+    
 }
 
