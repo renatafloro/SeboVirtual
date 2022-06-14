@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
     for(let i = 0; i < dados.length; i++) {
       if( email == dados[i].email && senha == dados[i].senha) {
         this.usuarioLogado.id = dados[i].id
+        console.log(`Verificar login ${this.usuarioLogado.id}`)
         this.usuarioLogado.nome = dados[i].nome
         this.usuarioLogado.email = dados[i].email
         this.usuarioLogado.senha = dados[i].senha
