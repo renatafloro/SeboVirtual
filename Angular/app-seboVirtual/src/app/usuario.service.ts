@@ -9,7 +9,7 @@ export class UsuarioService {
   constructor(private http: HttpClient) {}
 
   getAll(){
-    return this.http.get('http://localhost:8080/usuarios');
+    return this.http.get('https://ms-usuarios.herokuapp.com/usuarios');
   }
   
   save(dados: any){
