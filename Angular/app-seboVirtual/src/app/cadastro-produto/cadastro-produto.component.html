@@ -19,7 +19,12 @@
         <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco" placeholder="Informe o Preço do Livro" />
         <div *ngIf="fpreco.invalid" class="ng-invalid">
             *Informe o preço do produto
-        </div>  
+        </div> 
+        <br>
+        <input required minlength="1" class="form-control" type="text" #ffoto="ngModel" ngModel name="foto" placeholder="Informe o Link da Foto" />
+        <div *ngIf="ffoto.errors?.['required']" class="ng-invalid">
+        *Informe o link da foto
+        </div> 
         <br>
         <select required class="form-control" type="text" #fcategorias="ngModel" ngModel name="categoria">
             <option *ngFor="let categoria of categorias" value ="{{categoria.id}}">

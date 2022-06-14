@@ -32,7 +32,7 @@ constructor(
 
 
   logout(){
-    localStorage.removeItem("token")
+    localStorage.removeItem("userLogado")
     this.router.navigate(['/home'])
   }
 }
