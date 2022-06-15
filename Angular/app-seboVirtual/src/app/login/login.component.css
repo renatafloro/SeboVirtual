@@ -63,3 +63,14 @@ p{
   font-weight: bold;
   color: #F89C8B;
 }
+
+/*validação*/
+.ng-invalid.ng-touched:not(form){
+  border: 2px solid #6AAAAA;;
+}
+
+.alert {
+  color: #F89C8B;
+  font-weight: bold;
+  font-size: 14px;
+}

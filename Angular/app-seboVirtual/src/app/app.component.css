@@ -17,7 +17,7 @@
     color: #6AAAAA;
     font-family: 'Akshar';
     font-size: 24px;
-    
+
 }
 
 .nav-link{
@@ -85,3 +85,14 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
+li {
+  list-style-type: none;
+}
+
+label {
+  font-family: 'Akshar';
+  color:  #6AAAAA;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 19px;
+}
