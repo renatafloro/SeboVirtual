@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SobreComponent } from './sobre/sobre.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriaComponent } from './categoria/categoria.component';
+import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
     EditaProdutoComponent,
     SobreComponent,
     RodapeComponent,
-    CategoriaComponent
+    CategoriaComponent,
+    MinhasComprasComponent
   ],
   imports: [
     BrowserModule,

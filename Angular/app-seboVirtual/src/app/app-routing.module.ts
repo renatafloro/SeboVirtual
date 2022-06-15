@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { SobreComponent } from './sobre/sobre.component';
+import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 
 const routes: Routes = [
   {
@@ -64,7 +65,9 @@ canActivate:[AuthLoginService]
 { path:'categoria',
   component: CategoriaComponent
 },
-
+{ path:'minhas-compras',
+  component: MinhasComprasComponent
+},
 ];
 
 @NgModule({
