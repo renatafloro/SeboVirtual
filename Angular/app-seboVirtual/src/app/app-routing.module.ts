@@ -25,7 +25,7 @@ const routes: Routes = [
 {
   path: 'cadastroproduto',
   component: CadastroProdutoComponent,
-  canActivate: [AuthguardService]
+  //canActivate: [AuthguardService]
 },
 {
   path:'produtos/:idproduto',
@@ -71,4 +71,6 @@ canActivate:[AuthLoginService]
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}
