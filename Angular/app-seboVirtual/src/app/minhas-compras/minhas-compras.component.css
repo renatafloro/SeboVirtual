@@ -1,0 +1,15 @@
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: bold;
+        color:  #F89C8B;
+        font-size: 40px;
+        text-align: center;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #6AAAAA
+}
+table{
+  background-color: #FFC8B7;
+}
+.container{
+  margin-bottom: 230px;
+}
