@@ -63,9 +63,11 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 35px;
+  top: 42px;
   min-width: 90px;
   z-index: 1;
+  background-color: #F89C8B;
+  border-radius: 8px;
 }
 
 .dropdown-content a {
@@ -74,11 +76,12 @@
   padding-top: 7px;
   padding-bottom: 5px;
   padding-left: 4px;
+  font-size: 14px;
   text-decoration: none;
   display: block;
 }
 .dropdown-content a:hover {
-  background-color: #F89C8B;
+  background-color: #FFFAF9;
   border: 1px solid #6aaaaa9c;
   border-radius: 8px;
 }

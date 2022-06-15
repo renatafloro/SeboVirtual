@@ -1,6 +1,12 @@
 .arte-img{
- max-width: 200px;
-
+ max-width: 180px;
+ max-height: 200px;
+}
+.arte-img:hover{
+  transform: scale(1.1);
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+    transition-property: all;
 }
 .container{
 display: flex;
@@ -11,6 +17,7 @@ flex-wrap: wrap;
 }
 .boxprincipal{
   margin-bottom: 50px;
+  margin-top: 75px;
 }
 
 #img-romance{
@@ -46,15 +53,15 @@ height: 300px ;
   }
 }
 .imgcomentario1{
-  width: 300px;
-  margin:5px;
+  width: 250px;
+  margin:20px;
 }
 .terceirasection{
   display: flex;
   justify-content: center;
   max-width: 100%;
   margin-bottom: 50px;
-
+  margin-top: 45px;
 }
 hr{
   background-color: #6AAAAA;
@@ -63,6 +70,7 @@ h2{
   font-family: Berkshire Swash;
   color: #6AAAAA;
   margin-left: 550px;
+  margin-top: 60px;
 
 }
 
@@ -88,9 +96,20 @@ flex-wrap: wrap;
 max-width: 50px;
 margin-left: 50px;
 }
+.img-icons-money{
+  max-width: 50px;
+  margin-left: 50px;
+  margin-top: 10px;
+  }
+.img-icons-email{
+  max-width: 40px;
+  margin-left: 74px;
+  margin-top: 25px;
+ }
 p{
   font-family: Berkshire Swash;
   color: #6AAAAA;
 }
+
 
 

@@ -17,9 +17,7 @@ export class VendaService {
   }
 
   postVenda(venda:Venda): Observable<Venda> {
-    console.log(venda)
-    //return this.http.post<Venda>(this.url,venda);
-    return new Observable;
+    return this.http.post<Venda>(this.url,venda);
   }
 
 }
