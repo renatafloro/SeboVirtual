@@ -13,14 +13,14 @@ import { VendaService } from '../venda.service';
   styleUrls: ['./carrinho.component.css'],
 })
 export class CarrinhoComponent implements OnInit {
-  listaProdutos: Produto[] = [];
-  usuario: any = {'nome':'jady'}
-  comprados= this.carrinhoService.listarItens();
+  listaProdutos: Produto[] = []
+  usuario: any = {}
+  comprados= this.carrinhoService.listarItens()
 
   constructor(
     private carrinhoService: CarrinhoService,
     private vendaService: VendaService,
-    private router: Router
+    private router: Router,
   ) {}
 
   ngOnInit(): void {
@@ -47,16 +47,16 @@ export class CarrinhoComponent implements OnInit {
       alert("É necessário estar logado para finalização da compra.")
       this.router.navigate(['/login']);
     }
-   
+
   }
 
   total() {
     return this.comprados.map((item) => item.preco).reduce((a, b) => a + b, 0);
   }
 
-  
+
   excluir(id:number){
-    this.carrinhoService.excluir(id) 
+    this.carrinhoService.excluir(id)
         alert("Produto excluído do carrinho.")
   }
 
@@ -64,21 +64,23 @@ export class CarrinhoComponent implements OnInit {
     let venda = new Venda();
     venda.carrinho = []
     venda.data = new Date().toDateString()
+    venda.idUsuario = this.usuario.id
     this.listaProdutos.map(item => {
       let carrinho = new Carrinho()
-      carrinho.produto = item 
-    }) 
+      carrinho.produto = item
+      venda.carrinho.push(carrinho)
+    })
     return venda
-  }  
+  }
 
   getUsuarioFromLocalStorage(){
 
-    let user: (string | null) = localStorage.getItem("userConectado")
+    let user: (string | null) = localStorage.getItem("userLogado")
     console.log(user)
     if(user != null){
     user = JSON.parse(user)
     this.usuario = user
 
-    }  
+    }
   }
 }
