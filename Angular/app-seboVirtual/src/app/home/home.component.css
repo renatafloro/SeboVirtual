@@ -11,7 +11,6 @@ flex-wrap: wrap;
 }
 .boxprincipal{
   margin-bottom: 50px;
-
 }
 
 #img-romance{
@@ -39,15 +38,59 @@ height: 300px ;
   height: 230px;
   max-width: 100%;
 }
-.container-home{
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  margin-bottom: 50px;
-}
+
 
 @media(max-width:585px){
   .div-img{
   display: none;
   }
 }
+.imgcomentario1{
+  width: 300px;
+  margin:5px;
+}
+.terceirasection{
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  margin-bottom: 50px;
+
+}
+hr{
+  background-color: #6AAAAA;
+}
+h2{
+  font-family: Berkshire Swash;
+  color: #6AAAAA;
+  margin-left: 550px;
+
+}
+
+.img-home-principal{
+
+  height: 230px;
+  max-width: 100%;
+}
+.container-home{
+
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+
+}
+.segundasection{
+display: flex;
+flex-wrap: wrap;
+ justify-content: space-around;
+ align-items: center;
+}
+.img-icons{
+max-width: 50px;
+margin-left: 50px;
+}
+p{
+  font-family: Berkshire Swash;
+  color: #6AAAAA;
+}
+
+
