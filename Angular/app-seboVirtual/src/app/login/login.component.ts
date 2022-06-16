@@ -3,6 +3,7 @@ import { UsuarioService } from '../usuario.service';
 import { Router, RouterLink } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { DecodeTokenService } from '../decode-token.service';
+import { EmailValidator } from '@angular/forms';
 
 
 
@@ -39,6 +40,12 @@ export class LoginComponent implements OnInit {
       token =>{
         this.preArmazenarUsuarioLocalStorage(form.email, form.senha)
         localStorage.setItem('token',JSON.stringify(token));
+      },
+      error=>{
+        if(error.status == 401){
+            alert("Usuário ou senha não encontrados!")
+        }
+
       }
     )
   }
@@ -55,7 +62,7 @@ export class LoginComponent implements OnInit {
     for(let i = 0; i < dados.length; i++) {
       if(email == dados[i].email) {
         this.usuarioLogado.id = dados[i].id
-        console.log(`Verificar login ${this.usuarioLogado.id}`)
+        //console.log(`Verificar login ${this.usuarioLogado.id}`)
         this.usuarioLogado.nome = dados[i].nome
         this.usuarioLogado.email = dados[i].email
         this.usuarioLogado.cpf = dados[i].cpf
@@ -64,7 +71,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home'])
       }
     }
-
     window.location.reload()
   }
 
