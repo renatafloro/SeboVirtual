@@ -6,4 +6,5 @@ export class Venda {
     public data!:string;
     public idUsuario!:number;
     public carrinho!:Carrinho[];
+    public valorTotal!:number;
 }

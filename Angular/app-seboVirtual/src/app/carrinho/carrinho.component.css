@@ -22,8 +22,6 @@
         text-align: center;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #6AAAAA
-        
-        
     }
 
     .img{
@@ -106,6 +104,20 @@
     border-color:   #6AAAAA;
     transform: scale(1.05);
     transition: 0.3s;
+    }
+
+    .delete{
+    color: #FEFAE0;
+    font-weight: 800;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    background-color: #6AAAAA;
+    width: 35px;
+    height: 35px;
+    border-radius: 25px;
+    border-color:   #F89C8B;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
     }
    
     .limpar {

@@ -1,30 +1,50 @@
-<h2>Minhas Compras</h2>
-<br>
-<hr>
-<div class="container">
-    <table class="table">
-        <thead class="">
-            <tr>
-                <th>Id</th>
-                <th>Data</th>
-                <th>Descrição</th>
-                <th>Preço</th>
-                <th>Categoria</th>
+<div id="container">
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <h2>Minhas Compras</h2>
+        </div>
+      <div class="col-md-5 img">
+        <img src="../../assets/img/minhas-compras.png" alt="imagemCarrinho" width="450px" height="300px">
+      </div>
+    </div>
 
-        </thead>
-        <tbody>
-            <tr >
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-                <td> </td>
-
-
-            </tr>
-        </tbody>
-    </table>
-
+  <br>
+  <div>
+    <div *ngFor="let venda of listaVendas">
+      <div class="minhas-compras">
+        <div class="dateId">
+            <div class="data">
+                <p>Data da compra: {{venda.data | date:'dd/MM/yyyy'}}</p>
+              </div>
+              <div class="id">
+                <p>Número do pedido: {{venda.id}}</p>
+              </div>
+              <div class="valor-total">
+                <p>
+                  VALOR TOTAL: R$ {{venda.valorTotal}}
+                </p>
+              </div>
+        </div>
+      
+        <div class="produto">
+            <table class="table">
+                <thead class="">
+                    <tr>
+                        <th>Categoria</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>     
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of venda.carrinho">
+                        <td> {{item.produto.categoria.nome}}</td>
+                        <td> {{item.produto.descricao}}</td>
+                        <td> R$ {{item.produto.preco}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+  </div>
 </div>
-
-<router-outlet></router-outlet>

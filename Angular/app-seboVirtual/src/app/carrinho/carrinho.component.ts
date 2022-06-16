@@ -16,6 +16,7 @@ export class CarrinhoComponent implements OnInit {
   listaProdutos: Produto[] = []
   usuario: any = {}
   comprados= this.carrinhoService.listarItens()
+  valorTotal: number = 0
 
   constructor(
     private carrinhoService: CarrinhoService,
@@ -26,6 +27,7 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
     this.listaProdutos = this.carrinhoService.listarItens();
     this.getUsuarioFromLocalStorage();
+    this.calcularValorTotal();
   }
 
   limpar() {
@@ -39,7 +41,7 @@ export class CarrinhoComponent implements OnInit {
      let venda = this.montarVenda()
      this.vendaService.postVenda(venda).subscribe((resp: Venda)=>{
       this.carrinhoService.limpar()
-      this.router.navigate(['/home']);
+      this.router.navigate(['/minhas-compras']);
       alert('Compra realizada com sucesso!');
     })
   }
@@ -50,8 +52,8 @@ export class CarrinhoComponent implements OnInit {
 
   }
 
-  total() {
-    return this.comprados.map((item) => item.preco).reduce((a, b) => a + b, 0);
+  calcularValorTotal() {
+    this.valorTotal= this.comprados.map((item) => item.preco).reduce((a, b) => a + b, 0);
   }
 
 
@@ -65,6 +67,7 @@ export class CarrinhoComponent implements OnInit {
     venda.carrinho = []
     venda.data = new Date().toDateString()
     venda.idUsuario = this.usuario.id
+    venda.valorTotal= this.valorTotal
     this.listaProdutos.map(item => {
       let carrinho = new Carrinho()
       carrinho.produto = item

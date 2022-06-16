@@ -12,8 +12,8 @@ export class VendaService {
 
   constructor(private http : HttpClient) { }
 
-  getVendasByUsuario(): Observable<Venda[]> {
-    return this.http.get<Venda[]>(this.url);
+  getVendasByUsuario(idUsuario:number): Observable<Venda[]> {
+    return this.http.get<Venda[]>(`${this.url}/${idUsuario}`);
   }
 
   postVenda(venda:Venda): Observable<Venda> {

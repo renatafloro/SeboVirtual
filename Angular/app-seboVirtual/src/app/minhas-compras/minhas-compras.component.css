@@ -1,4 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+} 
+#container {
+  margin-top: 50px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 500px;
+  }
+
 h2{
+  margin-right: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-size: bold;
         color:  #F89C8B;
@@ -7,9 +21,51 @@ h2{
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: #6AAAAA
 }
-table{
+.img{
+  left: 90px; 
+}
+.minhas-compras {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 15px 200px;
+  height: 280px;
+  border: 1px solid #F89C8B;
+  border-radius: 20px;
+  }
+  .minhas-compras p{
+   margin-top: 2%;
+  }
+.card-title{
+  font-size: 25px;
+  margin-left: 840px;
+  margin-top: 5px;
+}
+.dateId{
+  position: relative;
+  padding: 2vw;
+  text-align: center;
+  font-size: 18px;
+}
+.data{
+ display: inline-block;
+ text-align: start;
+ float: left;
+
+ }
+.id{
+  display: inline-block;
+  text-align: start;
+  float: left;
+}
+.valor-total{
+  margin-top: 100px;
+  font-weight: bolder;
+}
+.table{
   background-color: #FFC8B7;
+  border-radius: 20px;
 }
-.container{
-  margin-bottom: 230px;
-}
+
+
+

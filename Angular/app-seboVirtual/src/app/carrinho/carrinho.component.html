@@ -27,12 +27,12 @@
           <h5>{{ item.preco | currency: "BRL" }}</h5>
         </div>
         <div>
-          <i role="button" class="material-icons" (click)="excluir(item.id)">delete</i>
+          <button class="delete" (click)="excluir(item.id)">X</button>
         </div>
       </div>
       <div class="carrinho-final">
         <h5 class="valor-total">
-          VALOR TOTAL: {{ total() | currency: "BRL" }}
+          VALOR TOTAL: {{ valorTotal | currency: "BRL" }}
         </h5>
         <hr>
         <div class="buttons">
