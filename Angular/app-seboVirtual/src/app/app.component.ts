@@ -34,7 +34,7 @@ constructor(
 
   logout(){
     localStorage.removeItem("token")
-    localStorage.removeItem("userConectado")
+    localStorage.removeItem("userLogado")
     this.usuarioConectado = false;
     this.router.navigate(['/home'])
   }
