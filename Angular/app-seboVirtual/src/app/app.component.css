@@ -99,3 +99,13 @@ label {
   margin-right: 10px;
   font-size: 19px;
 }
+
+@media(max-width: 776px){
+  .nav-b{
+    display: block !important ;
+  }
+  .nav-c {
+    display: block !important ;
+    margin: 0 auto !important;
+  }
+}
