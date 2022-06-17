@@ -29,3 +29,11 @@ margin-right: 5px;
 .twit{
   margin-left: 5px;
 }
+
+@media(max-width: 442px) {
+  p {
+    font-size: 11px;
+    text-align: center;
+  }
+
+}
