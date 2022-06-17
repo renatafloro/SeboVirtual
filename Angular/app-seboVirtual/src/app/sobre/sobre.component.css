@@ -73,6 +73,7 @@ height: 35px;
 border-radius: 25px;
 border-color:   #F89C8B;
 box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
+
 }
 
 button:hover {
@@ -96,7 +97,8 @@ margin-right: 30px;
 .id-visual {
 margin-top: 50px;
 display: flex;
-justify-content: space-between;
+flex-wrap: wrap;
+justify-content: center;
 padding: 50px;
 width: 100%;
 }
@@ -125,12 +127,17 @@ flex-direction: column;
 align-items: center;
 margin-left: 15%;
 margin-top: 4%;
-width: 75%;
+width: 350px;
+
+}
+.paleta-img{
+  min-width: 400px;
 }
 
 .foto-git {
 display: flex;
 justify-content: center;
+flex-wrap: wrap-reverse;
 }
 
 .dev-h1 h1{
@@ -146,7 +153,7 @@ background-color: #FAEEEA;
 display: flex;
 flex-direction: column;
 align-items: center;
-width: 25%;
+min-width: 25%;
 margin: 50px 0;
 }
 
@@ -175,3 +182,17 @@ letter-spacing: 5px;
 font-size: 18px;
 color: #F89C8B;
 }
+.id-text{
+  width: 500px;
+}
+
+@media(max-width: 1232px){
+  figcaption {
+    display: none;
+  }
+button{
+ display: none;
+
+}
+}
+
