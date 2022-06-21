@@ -19,6 +19,8 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

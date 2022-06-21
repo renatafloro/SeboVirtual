@@ -7,6 +7,7 @@ import { Categoria } from '../models/categoria.model';
 import { Produto } from '../models/produto.model';
 import { ProdutoService } from '../produto.service';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-consulta-produto',
@@ -24,6 +25,7 @@ export class ProdutoComponent implements OnInit {
               private router: Router,
               private carrinhoService: CarrinhoService,
               private auth: AuthLoginService,
+              private snackbBar: MatSnackBar,
 
               ) {}
 
@@ -40,7 +42,13 @@ export class ProdutoComponent implements OnInit {
         this.adicionarProdutoNoCarrinho(produtoEncontrado)
     }
     } else {
-      alert("Entre na sua conta para realizar a compra.")
+      //alert("Entre na sua conta para realizar a compra.")
+
+      this.snackbBar.open('Entre na sua conta para realizar a compra.', 'x', {
+        duration: 50000,
+
+      });
+
       this.router.navigate(['/login'])
     }
   }

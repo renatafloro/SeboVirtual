@@ -6,6 +6,7 @@ import { Produto } from '../models/produto.model';
 import { Usuario } from '../models/usuario.model';
 import { Venda } from '../models/venda.model';
 import { VendaService } from '../venda.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-carrinho',
@@ -22,6 +23,7 @@ export class CarrinhoComponent implements OnInit {
     private carrinhoService: CarrinhoService,
     private vendaService: VendaService,
     private router: Router,
+    private snackbBar: MatSnackBar
   ) {}
 
   ngOnInit(): void {
@@ -42,11 +44,19 @@ export class CarrinhoComponent implements OnInit {
      this.vendaService.postVenda(venda).subscribe((resp: Venda)=>{
       this.carrinhoService.limpar()
       this.router.navigate(['/minhas-compras']);
-      alert('Compra realizada com sucesso!');
+      //alert('Compra realizada com sucesso!');
+      this.snackbBar.open('Compra Realizada com Sucesso!', 'x', {
+        duration: 50000,
+
+      });
     })
   }
     else{
-      alert("É necessário estar logado para finalização da compra.")
+      //alert("É necessário estar logado para finalização da compra.")
+      this.snackbBar.open('É necessário estar logado para finalização da compra.', 'x', {
+        duration: 50000,
+
+      });
       this.router.navigate(['/login']);
     }
 
@@ -59,7 +69,12 @@ export class CarrinhoComponent implements OnInit {
 
   excluir(id:number){
     this.carrinhoService.excluir(id)
-        alert("Produto excluído do carrinho.")
+        //alert("Produto excluído do carrinho.")
+        this.snackbBar.open('Produto excluído do carrinho.', 'x', {
+          duration: 50000,
+
+        });
+
   }
 
   montarVenda():Venda{

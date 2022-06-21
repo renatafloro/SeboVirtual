@@ -4,6 +4,7 @@ import { Router, RouterLink } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 import { DecodeTokenService } from '../decode-token.service';
 import { EmailValidator } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
     private auth: AuthenticationService,
     private decodeToken: DecodeTokenService,
     private router: Router,
+    private snackbBar: MatSnackBar,
     ) { }
 
   usuarios: any = []
@@ -44,15 +46,18 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('token',JSON.stringify(token));
         this.router.navigate(['/home']);
 
+
       },
       error=>{
         if(error.status == 401){
-            console.log("Usuário ou senha não encontrados!")
+          // alert("Usuário ou senha não encontrados!")
+           this.snackbBar.open('Usuário ou senha não encontrados!', 'x', {
+             duration: 50000,
 
-        }
+           });
 
       }
-    )
+      })
   }
 
 
