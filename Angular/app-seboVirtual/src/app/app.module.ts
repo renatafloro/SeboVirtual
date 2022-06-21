@@ -17,6 +17,9 @@ import { SobreComponent } from './sobre/sobre.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { CategoriaComponent } from './categoria/categoria.component';
 import { MinhasComprasComponent } from './minhas-compras/minhas-compras.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @NgModule({
   declarations: [
@@ -32,13 +35,15 @@ import { MinhasComprasComponent } from './minhas-compras/minhas-compras.componen
     SobreComponent,
     RodapeComponent,
     CategoriaComponent,
-    MinhasComprasComponent
+    MinhasComprasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

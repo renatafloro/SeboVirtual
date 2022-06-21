@@ -3,20 +3,49 @@
   <h2>Todos os produtos</h2>
   <hr>
   <br>
-  <div>
-  <select type="text" #fcategorias="ngModel"  ngModel name="categoria" aria-placeholder="categoria" >
-    <option *ngFor="let categoria of categorias" value="{{categoria.id}}">
-      {{categoria.nome}}
-    </option>
-  </select>
+
+  <!--
+  <div class="row">
+    <div class="search-box">
+      <button class="btn-search"><i class="fa fa-search"></i></button>
+      <input type="text" class="input-search" name="search" [(ngModel)]="searchTerm" placeholder="Selecione uma categoria">
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Add ao carrinho</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let produto of listaProdutos | filter: searchTerm">
+          <td> {{ produto.descricao }} </td>
+          <td> {{produto.categoria.nome}} </td>
+          <td>R${{produto.preco}}</td>
+          <td><button class="btn w-100 comprar" (click)="getProdutoById(produto.id)" routerLink="/carrinho">
+            <i class="fa fa-cart-plus mr-2" aria-hidden="true"></i>
+            <span>Comprar</span>
+        </button></td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
+  -->
   <br>
   <br>
   <br>
+   <div class="search-box">
+      <button class="btn-search"><i class="fa fa-search"></i></button>
+      <input type="text" class="input-search" name="search" [(ngModel)]="searchTerm" placeholder="Selecione uma categoria">
+    </div>
   <div class="row d-flex justify-content-center">
     <div class="produto-card">
-      <div class="card"  *ngFor="let produto of listaProdutos">
-       
+      <div class="card"  *ngFor="let produto of listaProdutos | filter: searchTerm">
+
         <hr>
         <div class="card-body p-0">
             <p class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6">
@@ -38,4 +67,6 @@
       </div>
     </div>
   </div>
+
+  
 </div>

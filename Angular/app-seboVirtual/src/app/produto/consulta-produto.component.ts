@@ -6,6 +6,7 @@ import { CategoriaService } from '../categoria.service';
 import { Categoria } from '../models/categoria.model';
 import { Produto } from '../models/produto.model';
 import { ProdutoService } from '../produto.service';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @Component({
   selector: 'app-consulta-produto',
@@ -17,18 +18,18 @@ export class ProdutoComponent implements OnInit {
   listaProdutos: Produto[]= [];
   categorias: Categoria[]= [];
 
-
+  searchTerm: any;
   constructor(private produtoService: ProdutoService,
               private categoriaService: CategoriaService,
               private router: Router,
               private carrinhoService: CarrinhoService,
               private auth: AuthLoginService,
-              
+
               ) {}
 
   ngOnInit(): void {
     this.produtoService.getAll().subscribe(x => this.listaProdutos = x)
-    this.categoriaService.getAll().subscribe(x=> this.categorias =x)    
+    this.categoriaService.getAll().subscribe(x=> this.categorias =x)
   }
 
   getProdutoById(id: number){

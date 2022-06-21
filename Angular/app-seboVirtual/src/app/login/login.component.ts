@@ -14,11 +14,13 @@ import { EmailValidator } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
+  //loginError! : string ;
+
   constructor(
     private serviceUsuario: UsuarioService,
     private auth: AuthenticationService,
     private decodeToken: DecodeTokenService,
-    private router: Router
+    private router: Router,
     ) { }
 
   usuarios: any = []
@@ -40,15 +42,19 @@ export class LoginComponent implements OnInit {
       token =>{
         this.preArmazenarUsuarioLocalStorage(form.email, form.senha)
         localStorage.setItem('token',JSON.stringify(token));
+        this.router.navigate(['/home']);
+
       },
       error=>{
         if(error.status == 401){
-            alert("Usuário ou senha não encontrados!")
+            console.log("Usuário ou senha não encontrados!")
+
         }
 
       }
     )
   }
+
 
   preArmazenarUsuarioLocalStorage(email: string, senha: string){
     this.serviceUsuario.getAll().subscribe(x => {
