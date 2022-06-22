@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthguardService } from './authguard.service';
+import { Usuario } from './models/usuario.model';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,7 @@ constructor(
   this.pegarPerfilUsuarioConectado();
   this.administrador = this.AuthGuardSevice.ehAdministrador();
   this.usuarioConectado = this.AuthGuardSevice.temUsuarioLogado();
+
 }
 
 
