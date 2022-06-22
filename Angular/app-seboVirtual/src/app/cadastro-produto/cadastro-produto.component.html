@@ -11,11 +11,6 @@
         *Informe a descrição do livro
         </div>
         <br>
-        <input required minlength="1" class="form-control" type="number" #festoque="ngModel" ngModel name="estoque" placeholder="Informe o Estoque do Livro" />
-        <div *ngIf="festoque.errors?.['required']" class="ng-invalid">
-        *Informe o estoque do livro
-        </div>
-        <br>
         <input required class="form-control" type="text" #fpreco="ngModel" ngModel name="preco" placeholder="Informe o Preço do Livro" />
         <div *ngIf="fpreco.invalid" class="ng-invalid">
             *Informe o preço do produto
@@ -50,7 +45,6 @@
             <tr>
                 <th>Id</th>
                 <th>Descrição</th>
-                <th>Estoque</th>
                 <th>Preço</th>
                 <th>Categoria</th>
                 <th>Editar</th>
@@ -61,7 +55,6 @@
             <tr *ngFor="let prod of produtos">
                 <td> {{ prod.id }}</td>
                 <td> {{ prod.descricao }}</td>
-                <td> {{ prod.estoque }}</td>
                 <td> {{ prod.preco }}</td>
                 <td> {{ prod.categoria.nome}}</td>
                 <td> <a [routerLink]="['/produtos',prod.id]"><i class="material-icons">mode_edit</i></a></td>
@@ -70,7 +63,7 @@
         </tbody>
     </table>
 
-    <div id="snackbar">Novo livro salvo com sucesso!</div>
+    <div id="snackbar">Novo livro cadastrado com sucesso!</div>
 
 </div>
 </div>

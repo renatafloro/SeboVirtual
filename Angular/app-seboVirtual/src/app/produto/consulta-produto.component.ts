@@ -30,7 +30,9 @@ export class ProdutoComponent implements OnInit {
               ) {}
 
   ngOnInit(): void {
-    this.produtoService.getAll().subscribe(x => this.listaProdutos = x)
+    this.produtoService.getAll().subscribe(x => {
+      this.listaProdutos = x.filter(prod => prod.disponivel)
+    })
     this.categoriaService.getAll().subscribe(x=> this.categorias =x)
   }
 
@@ -41,6 +43,7 @@ export class ProdutoComponent implements OnInit {
       if(produtoEncontrado!=undefined){
         this.adicionarProdutoNoCarrinho(produtoEncontrado)
     }
+    console.log(produtoEncontrado)
     } else {
       //alert("Entre na sua conta para realizar a compra.")
 

@@ -86,6 +86,7 @@ export class CarrinhoComponent implements OnInit {
     this.listaProdutos.map(item => {
       let carrinho = new Carrinho()
       carrinho.produto = item
+      carrinho.produto.disponivel = false
       venda.carrinho.push(carrinho)
     })
     return venda

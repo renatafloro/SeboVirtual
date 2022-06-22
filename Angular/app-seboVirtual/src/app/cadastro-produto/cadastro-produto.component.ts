@@ -22,7 +22,9 @@ export class CadastroProdutoComponent implements OnInit {
     }
 
   gravar(dados: any){
+    console.log(dados)
     dados.categoria = {id: dados.categoria }
+    dados.disponivel=true
     this.serviceProduto.gravar(dados).subscribe(x => window.location.reload())
   }
 
