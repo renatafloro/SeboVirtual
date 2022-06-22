@@ -2,6 +2,7 @@ import { AuthguardService } from './../authguard.service';
 import { Component, OnInit } from '@angular/core';
 import { CadastroUsuarioService } from '../cadastro-usuario.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -12,13 +13,14 @@ import { Router } from '@angular/router';
 })
 export class CadastroUsuarioComponent implements OnInit {
 
- 
+
   listaEstados: any;
   listaPerfis: any;
 
   constructor(
     private service :  CadastroUsuarioService,
-    private router: Router){
+    private router: Router,
+    private snackbBar: MatSnackBar){
     this.listaEstados = this.getAllUFs();
     this.listaPerfis = this.getAllPerfis();
   }
@@ -30,14 +32,23 @@ export class CadastroUsuarioComponent implements OnInit {
   salvar(usuarioForm: any){
       this.service.metodoPost(usuarioForm.value).subscribe(
         ok =>{ console.log(ok)
-          alert('Usuário cadastrado com sucesso!');
+         // alert('Usuário cadastrado com sucesso!');
+          this.snackbBar.open('Usuário cadastrado com sucesso!', 'x', {
+            duration: 50000,
+
+          });
         }
         ,
         error => {console.error(error)
-        alert('Erro no cadastro, tente novamente.');
+        //alert('Erro no cadastro, tente novamente.');
+        this.snackbBar.open('Erro no cadastro, tente novamente.', 'x', {
+          duration: 50000,
+
+        });
+
 
         }
-        
+
       );this.router.navigate(['/login']);
         }
 
@@ -159,10 +170,10 @@ export class CadastroUsuarioComponent implements OnInit {
       }
 
       private getAllPerfis(): Array<any>{
-	return [ 
+	return [
         {nome: "Vendedor", type: "ADM"},
         {nome: "Cliente", type: "USER"}
       ]
       }
-      
+
 }
