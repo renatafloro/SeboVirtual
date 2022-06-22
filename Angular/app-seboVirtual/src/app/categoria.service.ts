@@ -9,7 +9,7 @@ import { Categoria } from './models/categoria.model';
   providedIn: 'root'
 })
 export class CategoriaService {
-  private url: string= 'http://localhost:8080/categoria'
+  private url: string= 'https://xperiencebook.herokuapp.com/categoria'
 
   constructor(
     private http: HttpClient

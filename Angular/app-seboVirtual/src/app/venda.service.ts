@@ -8,7 +8,7 @@ import { Venda } from './models/venda.model';
 })
 export class VendaService {
 
-  private url : string = 'http://localhost:8080/vendas'
+  private url : string = 'https://xperiencebook.herokuapp.com/vendas'
 
   constructor(private http : HttpClient) { }
 
