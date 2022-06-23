@@ -4,7 +4,7 @@
     <div>
       <div class="row">
         <div class="col-md-5 img">
-          <img src="../../assets/img/carrinho.png" alt="imagemCarrinho" width="450px" height="300px">
+          <img src="../../assets/img/carrinho.png" alt="imagemCarrinho" width="400px" height="250px">
 
         </div>
         <div class="col-md-6 d-flex flex-column justify-content-center">
@@ -23,8 +23,8 @@
           <p>Descricao: {{ item.descricao }}</p>
         </div>
         <div class="valor">
-          <h5>Preço:</h5>
-          <h5>{{ item.preco | currency: "BRL" }}</h5>
+          <h4>Preço:</h4>
+          <h4>{{ item.preco | currency: "BRL" }}</h4>
         </div>
         <div>
           <button class="delete" (click)="excluir(item.id)">X</button>

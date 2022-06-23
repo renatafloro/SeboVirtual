@@ -1,12 +1,17 @@
+*{
+  background-color: #F8F0E8;
+}
 .livro__login{
   max-width: 80%;
-  margin-top: 3%;
+  margin-top: 7%;
   margin-left: 12%;
+
 }
 
 html,body{
-  height: 100%;
+  height: 560px;
   overflow-y: hidden;
+
 }
 
 .container-fluid {

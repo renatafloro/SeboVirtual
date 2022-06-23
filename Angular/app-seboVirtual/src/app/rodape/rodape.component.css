@@ -6,38 +6,23 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 7px 0;
-    height: 130px;
+    height: 100px;
 }
 
 a{
-  margin-left: 5px;
+  margin-left:5px;
   color: black;
 }
 
-img{
-  margin-left: 5px;
-}
-
 .topofooter{
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
-.insta{
-
-margin-right: 5px;
-}
-
-.twit{
-  margin-left: 5px;
-}
-
-@media(max-width: 442px) {
-  p {
-    font-size: 11px;
+p {
+    font-size: 14px;
     text-align: center;
+    margin-top: 15px;
   }
-
-}
 
 .fa:hover{
   transform: scale(1.14);

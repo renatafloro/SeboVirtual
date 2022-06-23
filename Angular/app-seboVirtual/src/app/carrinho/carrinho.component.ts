@@ -34,7 +34,7 @@ export class CarrinhoComponent implements OnInit {
 
   limpar() {
     this.carrinhoService.limpar();
-    window.location.reload()
+   //window.location.reload()
   }
 
   finalizar() {
