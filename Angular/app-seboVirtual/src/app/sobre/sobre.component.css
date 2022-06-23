@@ -134,6 +134,12 @@ width: 350px;
   min-width: 400px;
 }
 
+.paleta-img:hover{
+padding-top: 0;
+transform: scale(1.05);
+transition: 0.5s;
+}
+
 .foto-git {
 display: flex;
 justify-content: center;

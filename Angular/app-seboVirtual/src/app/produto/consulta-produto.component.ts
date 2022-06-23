@@ -27,13 +27,14 @@ export class ProdutoComponent implements OnInit {
               private auth: AuthLoginService,
               private snackbBar: MatSnackBar,
 
-              ) {}
+              ){}
 
   ngOnInit(): void {
-    this.produtoService.getAll().subscribe(x => {
-      this.listaProdutos = x.filter(prod => prod.disponivel)
+    this.produtoService.getAllDisponiveis().subscribe(x => {
+      this.listaProdutos = x
+      console.log(this.listaProdutos)
     })
-    this.categoriaService.getAll().subscribe(x=> this.categorias =x)
+    this.categoriaService.getAll().subscribe(x=> this.categorias = x)
   }
 
   getProdutoById(id: number){
@@ -55,6 +56,7 @@ export class ProdutoComponent implements OnInit {
       this.router.navigate(['/login'])
     }
   }
+
   private adicionarProdutoNoCarrinho(produto: Produto){
     this.carrinhoService.adicionar(produto)
 
