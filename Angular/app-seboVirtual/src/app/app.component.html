@@ -13,7 +13,7 @@
         <li><a routerLink="home">Home</a></li>
         <li><a routerLink="sobre">Sobre</a></li>
         <li><a routerLink="produto">Livros</a></li>
-        <li><a *ngIf="usuarioConectado" routerLink="minhas-compras">Minhas Compras</a></li>
+        <li> <a *ngIf="usuarioConectado && administrador== false" routerLink="minhas-compras">Minhas Compras</a></li>
         <li> <a *ngIf="administrador == true" routerLink="cadastroproduto">Cadastrar</a></li>
       </div>
     </div>
@@ -38,13 +38,14 @@
     <ul class="navbar-nav ml-auto">
       <li>
         <label *ngIf="usuarioConectado == true">Bem vindo(a)</label>
+        <label *ngIf="administrador == true">Vendedor</label>
         <label *ngIf="usuarioConectado == false"> </label>
       </li>
       <li class="nav-item">
         <a class="nav-link" aria-current="page" routerLink="login"> <i class="fa fa-user i"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" routerLink="carrinho"> <i class="fa fa-shopping-cart i"></i></a>
+        <a class="nav-link" *ngIf="administrador==false" aria-current="page" routerLink="carrinho"> <i class="fa fa-shopping-cart i"></i></a>
       </li>
       <li class="nav-item">
         <a  class="nav-link" *ngIf="usuarioConectado" aria-current="page" (click)="logout()"> <i class="fa fa-sign-out"></i></a>

@@ -1,13 +1,23 @@
 <div id="container">
     <div class="row">
-        <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="col-md-5 d-flex flex-column justify-content-center">
             <h2>Minhas Compras</h2>
+            <div class="media">
+              <div >
+                <img class="mr-3" src="../../assets/img/robo.png" alt="Generic placeholder image">
+              </div>
+              <div class="media-body">
+                <h3>Seu pedido foi registrado.</h3>
+                Em breve entraremos em contato sobre informações de pagamento e entrega.
+                <br>
+                Obrigada por escolher a Xperience Book!
+              </div>
+            </div>
         </div>
       <div class="col-md-5 img">
         <img src="../../assets/img/minhas-compras.png" alt="imagemCarrinho" width="450px" height="300px">
       </div>
     </div>
-
   <br>
   <div>
     <div *ngFor="let venda of listaVendas">
@@ -25,14 +35,14 @@
                 </p>
               </div>
         </div>
-      
+
         <div class="produto">
             <table class="table">
                 <thead class="">
                     <tr>
                         <th>Categoria</th>
                         <th>Descrição</th>
-                        <th>Preço</th>     
+                        <th>Preço</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,3 +58,4 @@
     </div>
   </div>
 </div>
+

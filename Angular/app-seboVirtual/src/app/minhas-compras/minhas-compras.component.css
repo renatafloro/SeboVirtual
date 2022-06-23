@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-} 
+}
 #container {
   margin-top: 50px;
   width: 100vw;
@@ -14,15 +14,36 @@
 h2{
   margin-right: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: bold;
-        color:  #F89C8B;
-        font-size: 40px;
-        text-align: center;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #6AAAAA
+  font-size: bold;
+  color:  #F89C8B;
+  font-size: 40px;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #6AAAAA
+}
+.media{
+  margin-top: 30px;
+  margin-left: 5px;
+  border-radius: 20px;
+  border-color: #F89C8B;
+  border-style: dashed;
+  height: 130px;
+  width: 400px;
+}
+.mr-3{
+  margin-top: 10px;
+  height: 100px;
+  margin-left: 15px;
+}
+.media-body{
+  margin-top: 9px;
+  text-align: start;
+}
+.h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .img{
-  left: 90px; 
+  left: 90px;
 }
 .minhas-compras {
   display: flex;
