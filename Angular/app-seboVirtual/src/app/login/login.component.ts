@@ -47,16 +47,17 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home']);
 
 
+
       },
       error=>{
-        if(error.status == 401){
-          // alert("Usuário ou senha não encontrados!")
-           this.snackbBar.open('Usuário ou senha não encontrados!', 'x', {
-             duration: 50000,
 
-           });
+          //alert("Usuário ou senha n")
+            this.snackbBar.open('Usuário ou senha não encontrados!', 'x', {
+              duration: 50000,
 
-      }
+            });
+
+
       })
   }
 
@@ -79,7 +80,7 @@ export class LoginComponent implements OnInit {
         this.usuarioLogado.cpf = dados[i].cpf
         this.usuarioLogado.perfil = dados[i].perfil
         this.gravarDadosLocalStorage()
-        this.router.navigate(['/home'])
+        // this.router.navigate(['/home'])
       }
     }
     window.location.reload()
