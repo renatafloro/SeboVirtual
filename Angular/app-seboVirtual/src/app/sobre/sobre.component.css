@@ -17,13 +17,14 @@ font-weight: bolder;
 letter-spacing: 1px;
 text-align:center;
 font-size: 25px;
-margin-top: 2%;
+margin-top: 5%;
 color:#6AAAAA;
 }
 
 .p-1{
-font-size: 18px;
 text-align: justify;
+margin-top: 3%;
+font-size: 18px;
 letter-spacing: 1px;
 color:black;
 
@@ -46,8 +47,9 @@ margin-left: 800px;
 margin-right: 50px;
 top: 70px;
 right: 20px;
-font-size: 23px;
+font-size: 25px;
 text-align: justify;
+line-height: 25px;
 font-family: 'Akshar';
 color: black;
 
@@ -58,7 +60,8 @@ position: absolute;
 margin-left: 500px;
 margin-right: 200px;
 top: 210px;
-right: 20px;
+right: 1px;
+left: 34%;
 }
 
 button{
@@ -67,17 +70,17 @@ font-weight: 800;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-weight: bold;
 letter-spacing: 3px;
-background-color: #6AAAAA;
-width: 170px;
-height: 45px;
+width: 160px;
+height: 44px;
 border-radius: 25px;
+background-color: #6AAAAA;
 border-color:   #F89C8B;
 box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.29);
 
 }
 
 button:hover {
-transform: scale(1.05);
+transform: scale(1.06);
 transition: 0.3s;
 }
 
@@ -140,6 +143,23 @@ transform: scale(1.05);
 transition: 0.5s;
 }
 
+.container-valores h1{
+  text-align:left;
+  margin-left:16% ;
+  font-weight: bolder;
+  margin-top: 5%;
+  font-size: 30px;
+  letter-spacing: 3px;
+  color: #6AAAAA;
+}
+
+.img-valores{
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  justify-content: center;
+}
+
 .foto-git {
 display: flex;
 justify-content: center;
@@ -151,6 +171,7 @@ margin-top: 5%;
 font-size: 30px;
 letter-spacing: 3px;
 text-align: center;
+font-weight: bolder;
 color: #6AAAAA;
 background-color: #FAEEEA;
 }
@@ -188,6 +209,7 @@ letter-spacing: 5px;
 font-size: 18px;
 color: #F89C8B;
 }
+
 .id-text{
   width: 500px;
 }
@@ -201,4 +223,3 @@ button{
 
 }
 }
-

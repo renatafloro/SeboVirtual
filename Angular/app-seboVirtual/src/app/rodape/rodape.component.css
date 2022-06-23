@@ -7,24 +7,26 @@ footer {
     justify-content: center;
     padding: 7px 0;
     height: 130px;
-
 }
 
 a{
   margin-left: 5px;
   color: black;
-
 }
+
 img{
   margin-left: 5px;
 }
+
 .topofooter{
   padding-top: 30px;
 }
+
 .insta{
 
 margin-right: 5px;
 }
+
 .twit{
   margin-left: 5px;
 }
@@ -35,4 +37,11 @@ margin-right: 5px;
     text-align: center;
   }
 
+}
+
+.fa:hover{
+  transform: scale(1.14);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-property: all;
 }
