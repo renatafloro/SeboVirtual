@@ -27,7 +27,7 @@
 
 <section>
   <div class="terceirasection">
-    <div class="divcomentario1">
+    <div class="divcomentario1" routerLink="produto">
       <img  class="imgcomentario1" src="../../assets/img/comentario1.png" alt="comentario1">
     </div>
     <div>
@@ -44,8 +44,9 @@
 <div class="boxprincipal">
   <div class="container">
     <div class="box-img" id="img-romance">
-      <img class="arte-img" id="img-rom" src="../../assets/img/Romance (1).png" alt="romanceimg">
+      <img [routerLink]="['/produto']" class="arte-img" id="img-rom" src="../../assets/img/Romance (1).png" alt="romanceimg">
     </div>
+
     <div class="box-img" id="img-fantasia">
       <img  class="arte-img" src="../../assets/img/Fantasia.png" alt="fantasiaimg">
     </div>
