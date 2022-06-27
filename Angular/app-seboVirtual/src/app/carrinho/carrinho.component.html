@@ -23,8 +23,7 @@
           <p>Descricao: {{ item.descricao }}</p>
         </div>
         <div class="valor">
-          <h4>Preço:</h4>
-          <h4>{{ item.preco | currency: "BRL" }}</h4>
+          <h4> Preço: {{ item.preco | currency: "BRL" }}</h4>
         </div>
         <div>
           <button class="delete" (click)="excluir(item.id)">X</button>

@@ -67,6 +67,7 @@ export class CarrinhoComponent implements OnInit {
 
   excluir(id:number){
     this.carrinhoService.excluir(id)
+      this.calcularValorTotal()
         this.snackbBar.open('Produto excluído do carrinho.', 'x', {
           duration: 50000,
         });

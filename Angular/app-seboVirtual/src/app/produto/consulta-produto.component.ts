@@ -58,8 +58,13 @@ export class ProdutoComponent implements OnInit {
   }
 
   private adicionarProdutoNoCarrinho(produto: Produto){
-    this.carrinhoService.adicionar(produto)
-
-  }
+    let jaExiste = this.listaProdutos.find(prod => prod.id==produto.id)
+      /*if(jaExiste !== null || jaExiste !== undefined){
+      this.snackbBar.open('Produto já adicionado no carrinho', 'x', {
+        duration: 50000,
+      });
+    }else{*/
+      this.carrinhoService.adicionar(produto)
+    }
 
 }
