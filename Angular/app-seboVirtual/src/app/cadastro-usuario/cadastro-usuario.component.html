@@ -57,7 +57,7 @@
               <select required class="form-control" type="text" #festados="ngModel" ngModel name="estado">
                 <option *ngFor="let estado of listaEstados" value ="{{estado.sigla}}">
                     {{estado.nome}}
-                </option>    
+                </option>
               </select>
             </div>
             <div class="row mb-4">
@@ -91,8 +91,8 @@
             <select required class="form-control" type="text" #fperfis="ngModel" ngModel name="perfil">
               <option *ngFor="let perfil of listaPerfis" value ="{{perfil.type}}">
                   {{perfil.nome}}
-              </option>    
-            </select>            
+              </option>
+            </select>
           </div>
 
           <div class="row d-flex justify-content-center">
@@ -110,3 +110,4 @@
 
   </div>
 </div>
+<router-outlet></router-outlet>

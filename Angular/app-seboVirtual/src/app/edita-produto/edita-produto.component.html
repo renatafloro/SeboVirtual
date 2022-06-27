@@ -2,7 +2,7 @@
     <br>
     <h1 class="text-center">Edição de Produtos</h1>
     <br>
-    
+
     <input class="form-control" type="text" placeholder="Informe a descrição do livro" [(ngModel)]="produto.descricao" />
     <br>
     <input class="form-control" type="text" placeholder="Informe o preço do livro" [(ngModel)]="produto.preco" />
@@ -18,3 +18,4 @@
     <button routerLink="/cadastroproduto" type="reset" class="btn btn-danger mt-3">Cancelar</button>
     <hr>
 </div>
+<router-outlet></router-outlet>
