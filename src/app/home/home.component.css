@@ -81,10 +81,12 @@ hr{
 }
 
 h2{
- font-family: Berkshire Swash;
+
  color: #6AAAAA;
  text-align: center;
  margin-top: 60px;
+
+ font-size: 25px;
 }
 
 .img-home-principal{
@@ -103,6 +105,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 align-items: center;
+margin-left: 4%;
 }
 
 .img-icons{
@@ -117,14 +120,14 @@ margin-left: 50px;
 }
 
 .img-icons-email{
- max-width: 40px;
+ max-width: 37px;
  margin-left: 74px;
- margin-top: 25px;
+ margin-top: 28px;
 }
 
 p{
- font-family: Berkshire Swash;
  color: #6AAAAA;
+ font-size: 14px;
 }
 
 @media(max-width: 682px){
@@ -141,4 +144,17 @@ p{
 
 img {
   cursor: pointer;
+}
+
+span{
+  margin-left: 5%;
+  font-weight: bolder;
+}
+
+.carousel-inner > .carousel-item > img {
+  margin-top: 50px;
+  height: 150px; 
+  padding-left: 150px;
+  padding-right: 150px;
+
 }

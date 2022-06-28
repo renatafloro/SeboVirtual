@@ -15,7 +15,7 @@
     </div>
     <div class="div-img">
       <img class="img-icons-email" src="../../assets/img/email.png" alt="email">
-      <p>Envie sua avaliação por e-mail: <br>xperiencebook@gmail.com</p>
+      <p>Envie sua avaliação por e-mail: <br> <span>xperiencebook@gmail.com</span></p>
 
     </div>
   </div>
@@ -24,21 +24,31 @@
 
 <h2>Avaliações</h2>
 <hr>
+<br>
 
-<section>
-  <div class="terceirasection">
-    <div class="divcomentario1" routerLink="produto">
-      <img  class="imgcomentario1" src="../../assets/img/comentario1.png" alt="comentario1">
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img src="../../assets/img/Avaliacao1.png" class="d-block w-100" alt="..." >
     </div>
-    <div>
-      <img class="imgcomentario1" src="../../assets/img/comentario2.png" alt="comentario2">
+    <div class="carousel-item">
+      <img src="../../assets/img/avaliacao2.png" class="d-block w-100" alt="...">
     </div>
-    <div>
-      <img class="imgcomentario1" src="../../assets/img/comentario3.png" alt="comentario3">
+    <div class="carousel-item">
+      <img src="../../assets/img/avaliacao3.png" class="d-block w-100" alt="...">
     </div>
   </div>
-</section>
-<h2>Categorias</h2>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<h2>Conheça algumas de nossas categorias</h2>
 <hr>
 <section>
 <div class="boxprincipal">
@@ -48,13 +58,13 @@
     </div>
 
     <div class="box-img" id="img-fantasia">
-      <img  class="arte-img" src="../../assets/img/Fantasia.png" alt="fantasiaimg">
+      <img [routerLink]="['/produto']" class="arte-img" src="../../assets/img/Fantasia.png" alt="fantasiaimg">
     </div>
     <div class="box-img" id="img-terror">
-      <img class="arte-img" id="img-ter"  src="../../assets/img/Terror.png" alt="terrorimg">
+      <img [routerLink]="['/produto']" class="arte-img" id="img-ter"  src="../../assets/img/Terror.png" alt="terrorimg">
     </div>
     <div class="box-img" id="img-drama">
-      <img class="arte-img" src="../../assets/img/Drama.png" alt="dramaimg">
+      <img [routerLink]="['/produto']" class="arte-img" src="../../assets/img/Drama.png" alt="dramaimg">
     </div>
   </div>
 </div>

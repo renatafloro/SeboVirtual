@@ -31,12 +31,14 @@ font-size: 1rem
     background-color: #F8F0E8;
     overflow: hidden;
 }
+
 .card:hover{
 transform: scale(1.10);
 transition-duration: 0.3s;
 transition-timing-function: ease-in;
 transition-property: all;
 }
+
 hr{
 margin: 0;
 color: #F89C8B;
@@ -44,9 +46,10 @@ color: #F89C8B;
   align-items: center;
   justify-content: space-around;
 }
+
 .comprar:hover{
 background-color:#F89C8B;
-color: white
+color: white;
 }
 
 small{

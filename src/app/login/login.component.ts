@@ -50,9 +50,7 @@ export class LoginComponent implements OnInit {
 
       },
       error=>{
-
-          //alert("Usuário ou senha n")
-            this.snackbBar.open('Usuário ou senha não encontrados!', 'x', {
+            this.snackbBar.open('Usuário ou senha incorretos, tente novamente.', 'x', {
               duration: 50000,
 
             });
