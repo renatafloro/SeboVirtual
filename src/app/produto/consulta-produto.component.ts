@@ -46,9 +46,7 @@ export class ProdutoComponent implements OnInit {
     }
     console.log(produtoEncontrado)
     } else {
-      //alert("Entre na sua conta para realizar a compra.")
-
-      this.snackbBar.open('Entre na sua conta para realizar a compra.', 'x', {
+        this.snackbBar.open('Entre na sua conta para realizar a compra.', 'x', {
         duration: 50000,
 
       });
@@ -58,13 +56,6 @@ export class ProdutoComponent implements OnInit {
   }
 
   private adicionarProdutoNoCarrinho(produto: Produto){
-    let jaExiste = this.listaProdutos.find(prod => prod.id==produto.id)
-      /*if(jaExiste !== null || jaExiste !== undefined){
-      this.snackbBar.open('Produto já adicionado no carrinho', 'x', {
-        duration: 50000,
-      });
-    }else{*/
-      this.carrinhoService.adicionar(produto)
-    }
-
+    this.carrinhoService.adicionar(produto)
+  }
 }

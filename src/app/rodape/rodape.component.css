@@ -1,4 +1,3 @@
-
 footer {
     background-color:  #FFC8B7;
     display: flex;
@@ -18,11 +17,11 @@ a{
   padding-top: 10px;
 }
 
-p {
+p{
     font-size: 14px;
     text-align: center;
     margin-top: 15px;
-  }
+}
 
 .fa:hover{
   transform: scale(1.14);

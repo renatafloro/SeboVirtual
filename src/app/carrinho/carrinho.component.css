@@ -45,6 +45,7 @@
       border-radius: 20px;
       }
 
+<<<<<<< HEAD
 
     /*.lista-compras {
     display: flex;
@@ -61,22 +62,22 @@
     overflow: hidden;
     }*/
 
+=======
+>>>>>>> fff0f7c0cb1f9a5b001e69f3cc4d023333e307bd
     .foto-produto img {
     width: 100px;
     margin-left: 20px;
     }
 
-    .descricao{
+    .descricao p{
     margin-left: 25px;
-    font-family: 'Akshar';
-    font-weight: bold;
-    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
     text-align: justify;
     }
 
     .valor h4 {
     font-weight: bold;
-    font-family: 'Akshar';
     margin-left: 23px;
     }
 
