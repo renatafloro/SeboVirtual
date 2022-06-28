@@ -26,7 +26,7 @@ const routes: Routes = [
 {
   path: 'cadastroproduto',
   component: CadastroProdutoComponent,
-  //canActivate: [AuthguardService]
+  canActivate: [AuthguardService]
 },
 {
   path:'produtos/:idproduto',
@@ -66,7 +66,8 @@ canActivate:[AuthLoginService]
   component: CategoriaComponent
 },
 { path:'minhas-compras',
-  component: MinhasComprasComponent
+  component: MinhasComprasComponent,
+  canActivate:[AuthLoginService]
 },
 ];
 
