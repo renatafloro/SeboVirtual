@@ -45,37 +45,20 @@
       border-radius: 20px;
       }
 
-    /*.lista-compras {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 30px;
-    margin: 10px;
-    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 10%);
-    height: 140px;
-    width: 90%;
-    border: 1px solid #e9e9e9;
-    border-radius: 20px;
-    background-color: #F8F0E8;
-    overflow: hidden;
-    }*/
-
     .foto-produto img {
     width: 100px;
     margin-left: 20px;
     }
 
-    .descricao{
+    .descricao p{
     margin-left: 25px;
-    font-family: 'Akshar';
-    font-weight: bold;
-    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
     text-align: justify;
     }
 
     .valor h4 {
     font-weight: bold;
-    font-family: 'Akshar';
     margin-left: 23px;
     }
 

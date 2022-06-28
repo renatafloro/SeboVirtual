@@ -9,16 +9,28 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class CarrinhoService {
   private url: string = 'https://xperiencebook.herokuapp.com/carrinho';
   private produtosCarrinho: Produto[]= [];
-  
+
   constructor(private http: HttpClient,
     private snackbBar: MatSnackBar) {}
 
   public adicionar(produto: Produto) {
-    //alert(`Produto ${produto.id} adicionado ao carrinho.`)
-    this.snackbBar.open('Produto adicionado ao carrinho.', 'x', {
-      duration: 50000,
- });
-    this.produtosCarrinho.push(produto);
+
+    let jaExiste = this.produtosCarrinho.find(procuraProduto => produto.id == procuraProduto.id)
+
+    if(jaExiste){
+      this.snackbBar.open('Produto já foi adicionado!', 'x', {
+        duration: 50000,
+      });
+
+    }else{
+      this.snackbBar.open('Produto adicionado ao carrinho.', 'x', {
+        duration: 50000,
+      });
+
+      this.produtosCarrinho.push(produto);
+
+    }
+
   }
   public listarItens(): Produto[]{
    return this.produtosCarrinho
