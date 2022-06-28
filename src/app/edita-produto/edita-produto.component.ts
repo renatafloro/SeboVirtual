@@ -33,7 +33,6 @@ export class EditaProdutoComponent implements OnInit {
   atualizar(): void {
     this.serviceProduto.update(this.produto).subscribe(x => this.categorias = x )
     this.router.navigate(["/cadastroproduto"]);
-    //alert("Produto editado com sucesso!")
     this.snackbBar.open('Produto Editado com Sucesso!', 'x', {
       duration: 50000,
 

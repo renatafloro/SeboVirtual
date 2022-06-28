@@ -1,9 +1,7 @@
 <div class="container">
   <br />
   <h2>Todos os produtos</h2>
-  <hr />
-  <br />
-  <br />
+  
   <div class="search-box">
     <button class="btn-search"><i class="fa fa-search"></i></button>
     <input
@@ -18,9 +16,8 @@
     <div class="produto-card">
       <div
         class="card"
-        *ngFor="let produto of listaProdutos | filter: searchTerm"
-      >
-        <hr />
+        *ngFor="let produto of listaProdutos | filter: searchTerm">
+        <hr>
         <div class="card-body p-0">
           <p class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6">
             {{ produto.categoria.nome }}
@@ -30,8 +27,7 @@
               {{ produto.descricao }}
             </p>
             <div
-              class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6"
-            >
+              class="card-text text-center fw-bold text-nowrap elipse m-1 fs-6">
               <small class="m-1 font">Valor: R$ {{ produto.preco }} </small>
             </div>
           </div>
@@ -39,8 +35,7 @@
           <button
             class="btn w-100 comprar"
             (click)="getProdutoById(produto.id)"
-            routerLink="/carrinho"
-          >
+            routerLink="/carrinho">
             <i class="fa fa-cart-plus mr-2" aria-hidden="true"></i>
             <span>Comprar</span>
           </button>
