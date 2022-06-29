@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 #container {
   margin-top: 50px;
   width: 100vw;
@@ -51,9 +52,11 @@ h2{
   height: 280px;
   border: 1px solid #F89C8B;
   border-radius: 20px;
+  max-width: 600px;
+  padding: 10px;
   }
   .minhas-compras p{
-   margin-top: 2%;
+   margin-top: 30px;
   }
 .card-title{
   font-size: 25px;
@@ -80,6 +83,7 @@ h2{
 .valor-total{
   margin-top: 100px;
   font-weight: bolder;
+  padding-bottom: 15px;
 }
 .table{
   background-color: #FFC8B7;
@@ -105,4 +109,10 @@ max-width: 70%;
 .valor-total{
   margin-top: 50px;
 }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
