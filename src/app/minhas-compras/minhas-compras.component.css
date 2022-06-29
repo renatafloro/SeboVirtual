@@ -28,7 +28,8 @@ h2{
   border-radius: 20px;
   border-color: #F89C8B;
   border-style: dashed;
-  /* height: 130px; */
+  /*height: 130px;
+  width: 400px;*/
 
 }
 .mr-3{
@@ -52,7 +53,7 @@ h2{
   height: 280px;
   border: 1px solid #F89C8B;
   border-radius: 20px;
-  max-width: 600px;
+  max-width: 800px;
   padding: 10px;
   }
   .minhas-compras p{
@@ -89,6 +90,11 @@ h2{
   background-color: #FFC8B7;
   border-radius: 20px;
 }
+
+.img{
+  margin-right: 150px;
+}
+
 .media-body .media-descri_1{
   margin-bottom: 5px;
 }
@@ -97,20 +103,18 @@ h2{
   margin-bottom: 5px;
 }
 
-@media(max-width: 516px){
+@media(max-width: 300px){
 .img img {
-max-width: 70%;
-
+max-width: 100%;
 
 }
 .minhas-compras{
   display: block;
 }
 .valor-total{
-  margin-top: 50px;
+  margin-top: 10px;
 }
 }
-
 .row {
   display: flex;
   justify-content: center;
