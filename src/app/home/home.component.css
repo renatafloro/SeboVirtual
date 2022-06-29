@@ -153,8 +153,16 @@ span{
 
 .carousel-inner > .carousel-item > img {
   margin-top: 50px;
-  height: 150px; 
+  height: 150px;
   padding-left: 150px;
   padding-right: 150px;
 
+}
+@media(max-width:783px){
+  #carouselExampleControls{
+    display: none;
+  }
+  .avaliacao{
+    display: none;
+  }
 }

@@ -1,10 +1,10 @@
 <div id="container">
-  <div class="title">
+  <div class="title  ">
 
     <div>
       <div class="row">
-        <div class="col-md-5 img">
-          <img src="../../assets/img/carrinho.png" alt="imagemCarrinho" width="400px" height="250px">
+        <div class="col-md-5 img flex-wrap ">
+          <img src="../../assets/img/carrinho.png" alt="imagemCarrinho" width="70%" height="250px">
 
         </div>
         <div class="col-md-6 d-flex flex-column justify-content-center">
@@ -20,7 +20,11 @@
         </div>
         <div class="descricao">
           <p>Categoria: {{ item.categoria.nome }}</p>
+<<<<<<< HEAD
+          <p class="descricao">Descricao: {{ item.descricao }}</p>
+=======
           <p>Descrição: {{ item.descricao }}</p>
+>>>>>>> fff0f7c0cb1f9a5b001e69f3cc4d023333e307bd
         </div>
         <div class="valor">
           <h4> Preço: {{ item.preco | currency: "BRL" }}</h4>
@@ -34,7 +38,7 @@
           VALOR TOTAL: {{ valorTotal | currency: "BRL" }}
         </h5>
         <hr>
-        <div class="buttons">
+        <div class="buttons flex-wrap">
           <button class="btn btn-block limpar" (click)="limpar()" routerLink="/produtoslista">Limpar carrinho</button>
           <button class="btn btn-block" routerLink="/produto">Continuar comprando</button>
           <button class="btn btn-block" (click)="finalizar()">Finalizar compra</button>

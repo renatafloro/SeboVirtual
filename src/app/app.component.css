@@ -109,4 +109,10 @@ label {
     display: block !important ;
     margin: 0 auto !important;
   }
+  .name{
+    display: none;
+  }
+  .x{
+    display: none;
+  }
 }
