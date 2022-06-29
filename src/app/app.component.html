@@ -36,13 +36,14 @@
 
   <div class=" nav-c navbar-collapse collapse w-100 order-3 dual-collapse2" id="conteudoNavbarSuportado">
     <ul class="navbar-nav ml-auto">
-      <li>
-        <label *ngIf="usuarioConectado == true">Bem vindo(a)</label>
-        <label *ngIf="administrador == true">Vendedor</label>
-        <label *ngIf="usuarioConectado == false"> </label>
-      </li>
       <li class="nav-item">
-        <a class="nav-link" aria-current="page" routerLink="login"> <i class="fa fa-user i"></i></a>
+        <a class="nav-link" *ngIf="usuarioConectado" aria-current="page"> <i class="fa fa-user-circle" aria-hidden="true"></i></a>
+      </li>
+      <li>
+        <label *ngIf="usuarioConectado == true"> {{usuarioLogado.nome}}</label>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="usuarioConectado==false" aria-current="page" routerLink="login"> <i class="fa fa-user i"></i></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" *ngIf="administrador==false" aria-current="page" routerLink="carrinho"> <i class="fa fa-shopping-cart i"></i></a>

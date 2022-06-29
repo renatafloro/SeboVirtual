@@ -17,7 +17,7 @@ export class AppComponent {
 
 
   pegarPerfilUsuarioConectado(){
-    let user: (string | null) = localStorage.getItem("userConectado")
+    let user: (string | null) = localStorage.getItem("userLogado")
     if(user != null) {
       user = JSON.parse(user)
       this.usuarioConectado = true;
